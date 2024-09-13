@@ -6,6 +6,7 @@ import DOTS from "vanta/dist/vanta.dots.min";
 import TRUNK from "vanta/dist/vanta.trunk.min";
 import p5 from "p5";
 import HeroSection from "./heroSection";
+import "../../assets/styles/home/heroSection.css";
 
 function Background() {
   const vantaRef = useRef(null);
@@ -100,16 +101,7 @@ function Background() {
   }, []);
 
   return (
-    <div
-      ref={vantaRef}
-      className="background"
-      style={{
-        height: "100vh",
-        width: "100%",
-        overflow: " hidden",
-        position: "relative",
-      }}
-    >
+    <div ref={vantaRef} className="background">
       <HeroSection />
     </div>
   );

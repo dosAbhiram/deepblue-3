@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* SECTION 1 */
-
 .section {
   background-color: #ffffff;
   color: #252525;
   padding: 20px;
   font-family: "Raleway", sans-serif;
-  height: 350px;
+  height: 360px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +32,11 @@
   text-align: center;
   padding: 10px;
 }
+
 .left-content {
   max-width: 35%;
 }
+
 .right-content {
   text-align: left;
   max-width: 55%;
@@ -87,6 +88,51 @@
 
   .right-content {
     text-align: center;
+  }
+
+  .section {
+    height: auto;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .section h3 {
+    font-size: 1.8rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 432px) {
+  .section {
+    padding: 10px;
+    height: auto;
+  }
+
+  .left-content,
+  .right-content {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .section h3 {
+    font-size: 1.4rem;
+  }
+
+  .section p {
+    font-size: 0.9rem;
+  }
+
+  .section p b {
+    font-size: 1rem;
   }
 }
 
@@ -188,7 +234,7 @@
 /* CLIENT SECTION */
 
 .client-container {
-  background-image: url("images/backgroundImage.jpg");
+  background-image: url("/images/backgroundImage.jpg");
   position: relative;
   background-attachment: fixed;
   background-position: center;

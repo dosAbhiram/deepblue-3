@@ -14,7 +14,7 @@
   font-weight: 600;
   font-family: "Raleway", sans-serif;
   color: white;
-  bottom: 12vh;
+  bottom: 25%;
   left: 5vw;
 }
 
@@ -23,7 +23,7 @@
   position: absolute;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.678);
-  bottom: 8vh;
+  bottom: 15%;
   left: 5vw;
 }
 
@@ -154,13 +154,13 @@
   }
   .container h1 {
     font-size: 30px;
-    bottom: 12vh;
+    bottom: 35%;
     left: 3vw;
   }
 
   .container p {
     font-size: 15px;
-    bottom: 5vh;
+    bottom: 15%;
     left: 3vw;
   }
 
@@ -193,13 +193,13 @@
   }
   .container h1 {
     font-size: 30px;
-    bottom: 8vh;
+    bottom: 25%;
     left: 2vw;
   }
 
   .container p {
     font-size: 14px;
-    bottom: 5vh;
+    bottom: 10%;
     left: 2vw;
   }
 
