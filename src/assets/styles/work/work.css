@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.container {
+  background-image: url("/images/work-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative;
+}
+
+.container h1 {
+  position: absolute;
+  font-size: 50px;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  bottom: 12vh;
+  left: 5vw;
+}
+
+.container p {
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.678);
+  bottom: 8vh;
+  left: 5vw;
+}
+
+.my-masonry-grid {
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 30px;
+  background-clip: padding-box;
+}
+.my-masonry-grid_column > .portfolioImage {
+  width: 100%;
+  max-width: 100%;
+}
+
+.portfolioImage {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.PortFolio {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.works {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.works h3 {
+  width: 95vw;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.793);
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  padding: 30px 30px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 50vw;
+  margin-bottom: 20px;
+}
+
+.category button {
+  background-color: transparent;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.category button:hover {
+  background-color: rgba(36, 36, 255, 0.787);
+}
+
+.category button:active,
+.category button:focus {
+  background-color: rgba(52, 52, 255, 0.557);
+  outline: none;
+}
+
+.portfolioImage .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-family: "Raleway", sans-serif;
+  opacity: 0;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Overlay text */
+.portfolioImage .overlay p {
+  font-size: 34px;
+  text-align: center;
+}
+
+.portfolioImage .overlay a {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+/* Hover effect for image */
+.portfolioImage:hover img {
+  filter: brightness(0.5);
+  transform: scale(1.05);
+}
+
+.portfolioImage:hover .overlay {
+  background-color: rgba(55, 87, 175, 0.85);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 50vh;
+  }
+  .container h1 {
+    font-size: 30px;
+    bottom: 12vh;
+    left: 3vw;
+  }
+
+  .container p {
+    font-size: 15px;
+    bottom: 5vh;
+    left: 3vw;
+  }
+
+  .works h3 {
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .category {
+    width: 80vw;
+    gap: 15px;
+  }
+
+  .category button {
+    font-size: 16px;
+  }
+
+  .portfolioImage .overlay p {
+    font-size: 28px;
+  }
+
+  .portfolioImage .overlay a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 432px) {
+  .container {
+    height: 30vh;
+  }
+  .container h1 {
+    font-size: 30px;
+    bottom: 8vh;
+    left: 2vw;
+  }
+
+  .container p {
+    font-size: 14px;
+    bottom: 5vh;
+    left: 2vw;
+  }
+
+  .works h3 {
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .category {
+    width: 100vw;
+    gap: 10px;
+  }
+
+  .category button {
+    font-size: 14px;
+  }
+
+  .portfolioImage .overlay p {
+    font-size: 22px;
+  }
+
+  .portfolioImage .overlay a {
+    font-size: 12px;
+  }
+}

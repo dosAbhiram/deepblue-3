@@ -1,0 +1,63 @@
+.parallax-section {
+  position: relative;
+  height: 700px;
+  background-image: url("/images/image2.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.parallax-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway";
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.parallax-content h2 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.parallax-content p {
+  text-align: center;
+  align-items: center;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  line-height: 1.6;
+  max-width: 800px;
+}
+.parallax-section-2 {
+  position: relative;
+  height: 700px;
+  background-image: url("images//backgroundImage.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+.divider {
+  background-color: #39393971;
+}
+@media (max-width: 768px) {
+  .parallax-section-2 {
+    height: 400px;
+  }
+  .parallax-section {
+    height: 400px;
+  }
+}

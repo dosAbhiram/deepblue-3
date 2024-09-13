@@ -1,0 +1,120 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 0 15px;
+  top: 0;
+  width: 100vw;
+  z-index: 999;
+  transition: transform 0.3s ease-out, background-color 0.3s ease-out;
+}
+
+.navbar-transparent {
+  background-color: transparent;
+}
+
+.navbar-background {
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.415);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.navbar.hidden {
+  transform: translateY(-100%);
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px 20px;
+  position: relative;
+  z-index: 3;
+}
+
+.dropbtn img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+img.dropdown-icon {
+  opacity: 1;
+}
+
+img.close-icon {
+  opacity: 0;
+  z-index: 2;
+}
+
+.dropdown-open img.dropdown-icon {
+  opacity: 0;
+}
+
+.dropdown-open img.close-icon {
+  opacity: 1;
+}
+
+.dropdown-content {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #27598ce3;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown-content a {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c2c2ca;
+  padding: 12px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: #e0e0e0;
+}
