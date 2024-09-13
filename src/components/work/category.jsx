@@ -38,7 +38,7 @@ function Category({ selectedCategory }) {
           animate="visible"
           exit="exit"
           variants={fadeInVariants}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
         >
           <img src={item.src} alt={item.Name} />
           <div className="overlay">
