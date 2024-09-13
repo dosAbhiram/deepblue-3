@@ -55,12 +55,18 @@ function Navbar() {
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
+
+    if (!dropdownOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
   };
 
   const dropdownVariants = {
-    open: { y: 0, transition: { duration: 0.4, ease: "easeIn" } },
+    open: { x: 0, transition: { duration: 0.4, ease: "easeIn" } },
     closed: {
-      y: "-100vh",
+      x: "100vw",
       transition: { duration: 0.5, ease: "easeOut", delay: 0.1 },
     },
   };
@@ -135,27 +141,13 @@ function Navbar() {
             animate={dropdownOpen ? "open" : "closed"}
             variants={dropdownVariants}
           >
-            <Link to="/about">
-              <em>ABOUT</em>
-            </Link>
-            <Link to="/services">
-              <em>SERVICES</em>
-            </Link>
-            <Link to="/work">
-              <em>WORK</em>
-            </Link>
-            <Link to="/case-studies">
-              <em>CASE STUDIES</em>
-            </Link>
-            <Link to="/testimonials">
-              <em>TESTIMONIALS</em>
-            </Link>
-            <Link to="/blog">
-              <em>BLOG</em>
-            </Link>
-            <Link to="/contact">
-              <em>CONTACT</em>
-            </Link>
+            <Link to="/about">ABOUT</Link>
+            <Link to="/services">SERVICES</Link>
+            <Link to="/work">WORK</Link>
+            <Link to="/case-studies">CASE STUDIES</Link>
+            <Link to="/testimonials">TESTIMONIALS</Link>
+            <Link to="/blog">BLOG</Link>
+            <Link to="/contact">CONTACT</Link>
           </motion.div>
         </li>
       </ul>
