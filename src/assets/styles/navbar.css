@@ -1,3 +1,4 @@
+/* General Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,10 +24,6 @@
   transform: translateY(-100%);
 }
 
-.navbar.hidden {
-  transform: translateY(-100%);
-}
-
 .logo a {
   color: #fff;
   text-decoration: none;
@@ -46,6 +43,7 @@
   position: relative;
 }
 
+/* Dropdown button styles */
 .dropbtn {
   background: none;
   border: none;
@@ -64,6 +62,7 @@
   left: 0;
 }
 
+/* Icons for open/close */
 img.dropdown-icon {
   opacity: 1;
 }
@@ -80,6 +79,8 @@ img.close-icon {
 .dropdown-open img.close-icon {
   opacity: 1;
 }
+
+/* Dropdown content */
 .dropdown-content {
   position: fixed;
   top: 0;
@@ -94,12 +95,12 @@ img.close-icon {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  overflow: hidden;
   z-index: 10;
   visibility: visible;
   opacity: 1;
 }
 
+/* Dropdown links */
 .dropdown-content a {
   position: relative;
   font-family: "Raleway", sans-serif;
@@ -117,21 +118,26 @@ img.close-icon {
 .dropdown-content a:hover {
   color: #e0e0e0;
 }
+
+/* Media queries for mobile responsiveness */
 @media (max-width: 768px) {
   .dropdown-content {
-    width: 100vw;
-    height: 100vh;
+    width: 100vw; /* Take full width on smaller screens */
+    height: 100vh; /* Take full height */
+    padding: 50px 20px; /* Adjust padding for smaller screens */
   }
-  .dromdown-content a {
-    font-size: 18px;
+  .dropdown-content a {
+    font-size: 20px; /* Adjust font size for tablets */
   }
 }
+
 @media (max-width: 432px) {
   .dropdown-content {
-    width: 100vw;
-    height: 100vh;
+    width: 100vw; /* Full width on mobile */
+    height: 100vh; /* Full height on mobile */
+    padding: 50px 15px; /* Smaller padding for mobile */
   }
-  .dromdown-content a {
-    font-size: 18px;
+  .dropdown-content a {
+    font-size: 18px; /* Adjust font size for mobile */
   }
 }
