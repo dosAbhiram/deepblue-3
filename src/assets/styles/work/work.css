@@ -189,7 +189,7 @@
 
 @media screen and (max-width: 432px) {
   .container {
-    height: 30vh;
+    height: 50vh;
   }
   .container h1 {
     font-size: 30px;
