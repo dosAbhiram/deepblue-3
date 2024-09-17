@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import Work from "./pages/work";
 import About from "./pages/about";
@@ -9,7 +9,7 @@ import ScrollToTop from "./components/common/scrollToTop";
 
 function App() {
   return (
-    <Router basename="/deepblue-3">
+    <Router>
       <Navbar />
       <ScrollToTop />
       <Routes>

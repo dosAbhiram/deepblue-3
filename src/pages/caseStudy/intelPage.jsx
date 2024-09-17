@@ -14,9 +14,9 @@ function IntelCaseStudy() {
       <div className="background3">
         <motion.div
           className="three-content"
-          initial={{ opacity: 0, y: "50vh" }}
+          initial={{ opacity: 0, y: "-50vh" }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: easeIn }}
+          transition={{ duration: 0.8, ease: easeIn }}
           viewport={{ once: true }} // Ensures the animation triggers only once
         >
           <h2>Built using WordPress, The leading open source CMS.</h2>
@@ -30,7 +30,7 @@ function IntelCaseStudy() {
 
         <motion.div
           className="nest"
-          initial={{ opacity: 0, y: "50vh" }}
+          initial={{ opacity: 0, y: "-50vh" }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 80 }}
           viewport={{ once: true }} // Ensures the animation triggers only once
