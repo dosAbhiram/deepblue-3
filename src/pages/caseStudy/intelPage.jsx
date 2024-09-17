@@ -38,6 +38,38 @@ function IntelCaseStudy() {
 
         <div style={{ width: "40vw" }}></div>
       </div>
+      <div className="background4">
+        <motion.div
+          className="phone1"
+          initial={{ opacity: 0, y: "50vh" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 80 }}
+          viewport={{ once: true }}
+        ></motion.div>
+        <motion.div
+          className="phone2"
+          initial={{ opacity: 0, y: "50vh" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 80 }}
+          viewport={{ once: true }}
+        ></motion.div>
+        <motion.div
+          className="four-content"
+          initial={{ opacity: 0, y: "50vh" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: easeIn }}
+          viewport={{ once: true }}
+        >
+          <h2>Intel was certified ADA & W3C-compliant.</h2>
+          <div className="four-divider"></div>
+          <p>
+            The new website was designed from the ground up to adhere to
+            industry best practices, including W3C for usability, cross-browser
+            compatibility and mobile device compatibility, as well as
+            ADA-compliance for those with disabilities.
+          </p>
+        </motion.div>
+      </div>
     </>
   );
 }

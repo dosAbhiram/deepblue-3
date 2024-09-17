@@ -76,3 +76,52 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+.background4 {
+  background-color: #8acde8;
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.phone1 {
+  background-image: url("/images/caseStudy/intel/phone1.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 360px;
+  height: 720px;
+}
+.phone2 {
+  background-image: url("/images/caseStudy/intel/phone2.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 360px;
+  height: 720px;
+}
+.four-content {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.four-content h2 {
+  font-size: 50px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  color: #4d4d4d;
+  line-height: 1.7;
+}
+.four-content p {
+  width: 25vw;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.645);
+  line-height: 1.7;
+}
+.four-divider {
+  width: 50px;
+  border-bottom: 3px rgb(234, 249, 66) solid;
+  margin: 20px;
+}
