@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 .background1 {
-  background-image: url("images/caseStudy/intel/intel-caseStudy.webp");
+  background-image: url("/images/caseStudy/intel/intel-caseStudy.webp");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
 }
 .background2 {
-  background-image: url("images/caseStudy/intel/intel1.webp");
+  background-image: url("/images/caseStudy/intel/intel1.webp");
   background-size: cover;
   background-repeat: no-repeat;
   height: 150vh;
@@ -29,7 +29,7 @@
 }
 .background3 {
   position: relative;
-  background-image: url("images/caseStudy/intel/background3.jpg");
+  background-image: url("/images/caseStudy/intel/background3.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -72,7 +72,7 @@
   margin-left: 180px;
   width: 400px;
   height: 400px;
-  background-image: url("images/caseStudy/intel/nest.webp");
+  background-image: url("/images/caseStudy/intel/nest.webp");
   background-repeat: no-repeat;
   background-size: contain;
 }
