@@ -1,5 +1,5 @@
 import "../../assets/styles/work/caseStudy/intelPage.css";
-import { easeIn, motion, spring } from "framer-motion";
+import { easeIn, motion } from "framer-motion";
 
 function IntelCaseStudy() {
   return (
@@ -15,8 +15,9 @@ function IntelCaseStudy() {
         <motion.div
           className="three-content"
           initial={{ opacity: 0, y: "50vh" }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: easeIn }}
+          viewport={{ once: true }} // Ensures the animation triggers only once
         >
           <h2>Built using WordPress, The leading open source CMS.</h2>
           <div className="three-divider"></div>
@@ -26,12 +27,15 @@ function IntelCaseStudy() {
             out problems that will benefit everyone involved.
           </p>
         </motion.div>
+
         <motion.div
           className="nest"
           initial={{ opacity: 0, y: "50vh" }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: spring }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 80 }}
+          viewport={{ once: true }} // Ensures the animation triggers only once
         ></motion.div>
+
         <div style={{ width: "40vw" }}></div>
       </div>
     </>
