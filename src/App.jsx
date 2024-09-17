@@ -1,14 +1,24 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import Work from "./pages/work";
+import About from "./pages/about";
+import IntelCaseStudy from "./pages/caseStudy/intelPage";
+import Navbar from "./components/common/navbar";
+import Footer from "./components/common/footer";
+import ScrollToTop from "./components/common/scrollToTop";
 
 function App() {
   return (
     <Router basename="/deepblue-3">
+      <Navbar />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/work/intel" element={<IntelCaseStudy />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

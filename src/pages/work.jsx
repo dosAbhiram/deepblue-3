@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Navbar from "../components/common/navbar";
 import Category from "../components/work/category";
 import HeroSection from "../components/work/heroSection";
 import Section from "../components/work/mainContent";
@@ -13,7 +12,6 @@ function Work() {
   };
   return (
     <div>
-      <Navbar />
       <HeroSection />
       <Section />
 

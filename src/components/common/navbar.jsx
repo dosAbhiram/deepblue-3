@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -55,12 +56,7 @@ function Navbar() {
 
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
-
-    if (!dropdownOpen) {
-      document.body.classList.add("no-scroll");
-    } else {
-      document.body.classList.remove("no-scroll");
-    }
+    document.body.classList.toggle("no-scroll", !dropdownOpen);
   };
 
   const dropdownVariants = {
@@ -72,17 +68,15 @@ function Navbar() {
   };
 
   const controlNavbar = () => {
-    // Only hide the navbar if the dropdown is NOT open
     if (!dropdownOpen) {
       if (window.scrollY > lastScrollY) {
-        setNavHidden(true); // Hide navbar on scroll down
+        setNavHidden(true);
       } else {
-        setNavHidden(false); // Show navbar on scroll up
+        setNavHidden(false);
       }
       setLastScrollY(window.scrollY);
     }
 
-    // Toggle background based on scroll position
     if (window.scrollY > 100) {
       setNavbarBackground(true);
     } else {
@@ -97,6 +91,11 @@ function Navbar() {
     };
   }, [lastScrollY, dropdownOpen]);
 
+  const handleLinkClick = () => {
+    setDropdownOpen(false); // Close the dropdown when a link is clicked
+    document.body.classList.remove("no-scroll"); // Ensure body scroll is enabled
+  };
+
   return (
     <nav
       className={`navbar ${navHidden ? "hidden" : ""} ${
@@ -104,7 +103,7 @@ function Navbar() {
       }`}
     >
       <div className="logo">
-        <Link to="//">
+        <Link to="//" onClick={handleLinkClick}>
           <img src="icons/logo.webp" alt="Logo" />
         </Link>
       </div>
@@ -146,28 +145,40 @@ function Navbar() {
             variants={dropdownVariants}
           >
             <div className="link">
-              <Link to="/about" className="links">
+              <Link to="/about" className="links" onClick={handleLinkClick}>
                 About
               </Link>
-              <Link to="/services" className="links">
+              <Link to="/services" className="links" onClick={handleLinkClick}>
                 Services
               </Link>
-              <Link to="/work" className="links">
+              <Link to="/work" className="links" onClick={handleLinkClick}>
                 Work
               </Link>
-              <Link to="/case-studies" className="links">
+              <Link
+                to="/case-studies"
+                className="links"
+                onClick={handleLinkClick}
+              >
                 Case Studies
               </Link>
-              <Link to="/testimonials" className="links">
+              <Link
+                to="/testimonials"
+                className="links"
+                onClick={handleLinkClick}
+              >
                 Testimonials
               </Link>
-              <Link to="/blog" className="links">
+              <Link to="/blog" className="links" onClick={handleLinkClick}>
                 Blog
               </Link>
-              <Link to="/contact" className="links">
+              <Link to="/contact" className="links" onClick={handleLinkClick}>
                 Contact
               </Link>
-              <Link to="/consultation" className="links">
+              <Link
+                to="/consultation"
+                className="links"
+                onClick={handleLinkClick}
+              >
                 Schedule a Consultation
               </Link>
             </div>
