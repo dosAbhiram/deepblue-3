@@ -1,9 +1,9 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { interpolate } from "flubber";
 import "../../assets/styles/navbar.css";
+
 function Navbar() {
   const openTop = "M50,150 L450,150";
   const openMiddle = "M50,250 L450,250";
@@ -72,13 +72,17 @@ function Navbar() {
   };
 
   const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
-      setNavHidden(true);
-    } else {
-      setNavHidden(false);
+    // Only hide the navbar if the dropdown is NOT open
+    if (!dropdownOpen) {
+      if (window.scrollY > lastScrollY) {
+        setNavHidden(true); // Hide navbar on scroll down
+      } else {
+        setNavHidden(false); // Show navbar on scroll up
+      }
+      setLastScrollY(window.scrollY);
     }
-    setLastScrollY(window.scrollY);
 
+    // Toggle background based on scroll position
     if (window.scrollY > 100) {
       setNavbarBackground(true);
     } else {
@@ -91,7 +95,7 @@ function Navbar() {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, dropdownOpen]);
 
   return (
     <nav
@@ -141,13 +145,45 @@ function Navbar() {
             animate={dropdownOpen ? "open" : "closed"}
             variants={dropdownVariants}
           >
-            <Link to="/about">ABOUT</Link>
-            <Link to="/services">SERVICES</Link>
-            <Link to="/work">WORK</Link>
-            <Link to="/case-studies">CASE STUDIES</Link>
-            <Link to="/testimonials">TESTIMONIALS</Link>
-            <Link to="/blog">BLOG</Link>
-            <Link to="/contact">CONTACT</Link>
+            <div className="link">
+              <Link to="/about" className="links">
+                About
+              </Link>
+              <Link to="/services" className="links">
+                Services
+              </Link>
+              <Link to="/work" className="links">
+                Work
+              </Link>
+              <Link to="/case-studies" className="links">
+                Case Studies
+              </Link>
+              <Link to="/testimonials" className="links">
+                Testimonials
+              </Link>
+              <Link to="/blog" className="links">
+                Blog
+              </Link>
+              <Link to="/contact" className="links">
+                Contact
+              </Link>
+              <Link to="/consultation" className="links">
+                Schedule a Consultation
+              </Link>
+            </div>
+
+            <div className="navbar-social-icons">
+              <a href="#">
+                <img src="icons/social-icons/facebook.png" alt="Facebook" />
+              </a>
+              <a href="#">
+                <img src="icons/social-icons/twitter.png" alt="Twitter" />
+              </a>
+              <a href="#">
+                <img src="icons/social-icons/linkedin.png" alt="LinkedIn" />
+              </a>
+            </div>
+            <p>© 2024 DEEPBLUE LLC. All Rights Reserved.</p>
           </motion.div>
         </li>
       </ul>

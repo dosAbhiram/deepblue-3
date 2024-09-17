@@ -6,6 +6,7 @@ import DOTS from "vanta/dist/vanta.dots.min";
 import TRUNK from "vanta/dist/vanta.trunk.min";
 import p5 from "p5";
 import HeroSection from "./heroSection";
+import Navbar from "../common/navbar";
 import "../../assets/styles/home/heroSection.css";
 
 function Background() {
@@ -102,6 +103,7 @@ function Background() {
 
   return (
     <div ref={vantaRef} className="background">
+      <Navbar />
       <HeroSection />
     </div>
   );

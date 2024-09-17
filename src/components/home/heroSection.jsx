@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import "../../assets/styles/home/heroSection.css";
-import Navbar from "../common/navbar";
 
 function HeroSection() {
   const handleScroll = () => {
@@ -16,7 +15,6 @@ function HeroSection() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <Navbar />
       <div className="content">
         <h1>
           Unleashing the Power of <b>AI</b> for Cutting-Edge <b>Web Design.</b>

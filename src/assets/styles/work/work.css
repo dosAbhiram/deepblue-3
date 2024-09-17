@@ -104,6 +104,7 @@
 .category button:active,
 .category button:focus {
   background-color: rgba(52, 52, 255, 0.557);
+  color: white;
   outline: none;
 }
 
