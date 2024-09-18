@@ -15,16 +15,14 @@ header {
   top: 50%;
   left: 0;
   width: 100%;
-  margin: 0;
-  z-index: 999;
   transform: translate(0, -50%);
-  pointer-events: none;
 }
 
 .banner-caption {
   width: 1170px;
   max-width: 90%;
   margin: 0 auto;
+  pointer-events: none;
 }
 
 .banner-caption h1 {
@@ -33,7 +31,6 @@ header {
   font-weight: 400;
   font-size: 78px;
   line-height: 100px;
-  margin: 0;
 }
 
 .banner-caption b {
@@ -48,6 +45,7 @@ header {
   top: 75%;
   left: 50%;
   transform: translateX(50%);
+  cursor: pointer;
 }
 
 .scroll-button img {

@@ -5,11 +5,14 @@ import { useRef, useEffect } from "react";
 
 function Section() {
   return (
-    <div className="section">
+    <div className="section1">
       <div className="content-wrapper">
         <div className="left-content">
-          <h2>Atlanta Web Design.</h2>
-          <h3>est. 1999.</h3>
+          <h2>
+            Atlanta Web Design.
+            <br />
+            <span>est. 1999.</span>
+          </h2>
         </div>
         <div className="right-content">
           <p>
@@ -20,10 +23,10 @@ function Section() {
             <b>measurable results</b> for businesses of all sizes.
           </p>
           <p>
-            Headquartered in <b>Atlanta</b>, with offices in{" "}
-            <b>San Francisco</b>, we serve a diverse clientele, including
-            technology innovators, non-profit organizations, government
-            agencies, academic institutions, and forward-thinking businesses.
+            With offices in <b>Atlanta</b>, with offices in <b>San Francisco</b>
+            , we serve a diverse clientele, including technology innovators,
+            non-profit organizations, government agencies, academic
+            institutions, and forward-thinking businesses.
           </p>
         </div>
       </div>
