@@ -31,7 +31,7 @@ function Section() {
       <div className="work-section">
         <div className="work-grid">
           <motion.div
-            className="content"
+            className="work-content"
             initial={{ opacity: 0, x: "-25vw" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
@@ -51,7 +51,7 @@ function Section() {
         </div>
         <div className="work-grid">
           <motion.div
-            className="content"
+            className="work-content"
             initial={{ opacity: 0, x: "-25vw" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
@@ -71,7 +71,7 @@ function Section() {
         </div>
         <div className="work-grid">
           <motion.div
-            className="content"
+            className="work-content"
             initial={{ opacity: 0, x: "-25vw" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
@@ -90,7 +90,7 @@ function Section() {
         </div>
         <div className="work-grid">
           <motion.div
-            className="content"
+            className="work-content"
             initial={{ opacity: 0, x: "-25vw" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}

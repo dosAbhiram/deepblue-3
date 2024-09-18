@@ -101,7 +101,7 @@ function Background() {
   }, []);
 
   return (
-    <div ref={vantaRef} className="background">
+    <div ref={vantaRef} className="animated-background">
       <HeroSection />
     </div>
   );

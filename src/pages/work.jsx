@@ -3,7 +3,6 @@ import Category from "../components/work/category";
 import HeroSection from "../components/work/heroSection";
 import Section from "../components/work/mainContent";
 import "../assets/styles/work/work.css";
-import Footer from "../components/common/footer";
 
 function Work() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -37,9 +36,7 @@ function Work() {
           <button onClick={() => handleClick("eCommerce")}>eCommerce</button>
         </div>
         <Category selectedCategory={selectedCategory} />
-        <div style={{ backgroundColor: "#3f4247", width: "100vw" }}>
-          <Footer />
-        </div>
+        <div style={{ backgroundColor: "#3f4247", width: "100vw" }}></div>
       </div>
     </div>
   );
