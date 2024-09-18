@@ -3,7 +3,7 @@
   color: #252525;
   padding: 20px;
   font-family: "Raleway", sans-serif;
-  height: 350px;
+  height: 380px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,7 +69,62 @@
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #252525;
 }
-
+.work-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+.work-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64.9vh;
+  border-bottom: #357abe 1px solid;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 40vw;
+  padding-left: 3vw;
+}
+.content h2 {
+  font-size: 2.5vw;
+  font-family: "Raleway", sans-serif;
+  color: #357abe;
+  font-weight: 600;
+}
+.content p {
+  width: 30vw;
+  font-size: 1.5vw;
+  font-family: "Raleway", sans-serif;
+  color: #252525df;
+  font-weight: 450;
+  text-align: left;
+  line-height: 1.2;
+}
+.content a {
+  font-size: 1.5vw;
+  font-family: "Raleway", sans-serif;
+  color: #252525;
+  font-weight: 500;
+  text-align: left;
+  text-decoration: none;
+}
+.content a:hover {
+  color: #357abe;
+}
+.work-grid img {
+  width: 60vw;
+}
+.content-divider {
+  height: 1.3px;
+  width: 100vw;
+  background-color: #357abe;
+}
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column;
@@ -102,6 +157,28 @@
   .section p {
     font-size: 0.8rem;
   }
+  .work-grid {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .content {
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+  .content h2 {
+    font-size: 6vw;
+  }
+  .content p {
+    width: 80vw;
+    font-size: 3.5vw;
+  }
+  .content a {
+    font-size: 3.5vw;
+  }
+  .work-grid img {
+    width: 100vw;
+  }
 }
 
 @media (max-width: 432px) {
@@ -130,5 +207,28 @@
 
   .section p b {
     font-size: 1rem;
+  }
+  .work-grid {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .content {
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    height: 30vh;
+  }
+  .content h2 {
+    font-size: 6vw;
+  }
+  .content p {
+    width: 80vw;
+    font-size: 3.5vw;
+  }
+  .content a {
+    font-size: 3.5vw;
+  }
+  .work-grid img {
+    width: 100vw;
   }
 }

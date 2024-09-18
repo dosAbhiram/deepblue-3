@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 .container {
-  background-image: url("/images/work-background.jpg");
+  background-image: url("/images/backgrounds/work-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;

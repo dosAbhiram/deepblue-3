@@ -155,7 +155,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2vw;
+  margin-top: 10vw;
 }
 .five-content h1 {
   color: white;
@@ -177,6 +177,10 @@
 }
 .background5 img {
   margin-top: 3vw;
+}
+.five-content button:hover {
+  background-color: #d9cd1f;
+  color: white;
 }
 /* Responsive changes */
 @media (max-width: 1024px) {

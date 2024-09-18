@@ -94,6 +94,8 @@ img.close-icon {
   z-index: 10;
   visibility: visible;
   opacity: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .link {
   display: flex;
