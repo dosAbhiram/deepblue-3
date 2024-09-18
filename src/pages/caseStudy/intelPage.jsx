@@ -80,6 +80,23 @@ function IntelCaseStudy() {
           </p>
         </motion.div>
       </div>
+      <div className="background5">
+        <div className="five-content">
+          <h1>Create an impact</h1>
+          <button>
+            <em>Visit Website</em>
+          </button>
+        </div>
+        <motion.div
+          className="penguin"
+          initial={{ opacity: 0, y: "50vh" }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ type: "spring", stiffness: 50, damping: 15 }}
+          viewport={{ once: true }}
+        >
+          <img src="images/caseStudy/intel/penguin.png" />
+        </motion.div>
+      </div>
     </>
   );
 }
