@@ -37,13 +37,11 @@ function Section() {
 function ParallaxSection() {
   return (
     <section className="parallax-section">
-      <div className="width-container">
-        <div className="parallax-content">
-          <h2>
-            “In one drop of water are found all the secrets of all the oceans.”
-          </h2>
-          <p>– Kahlil Gibran –</p>
-        </div>
+      <div className="parallax-content">
+        <h2>
+          “In one drop of water are found all the secrets of all the oceans.”
+        </h2>
+        <p>– Kahlil Gibran –</p>
       </div>
     </section>
   );
@@ -52,130 +50,128 @@ function Section2() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
   return (
-    <div className="width-container">
-      <div ref={ref} className="Container">
-        <motion.h1
+    <div ref={ref} className="Container">
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+      >
+        Our Capabilities
+      </motion.h1>
+      <div className="section-container">
+        <div className="part">
+          <motion.div
+            className="card"
+            initial={{ x: "-100vw", opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+          >
+            <h2>Custom Web Design</h2>
+            <p>
+              We craft visually stunning and user-friendly websites that
+              captivate and engage your target audience and drive conversions.
+            </p>
+            <a href="#">
+              <em>Learn More</em>
+            </a>
+          </motion.div>
+          <motion.div
+            className="card"
+            initial={{ x: "-100vw", opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{ delay: 0.2, duration: 0.4, ease: "easeInOut" }}
+          >
+            <h2>Brand & Styling Strategies</h2>
+            <p>
+              We establish a strong brand identity that resonates with your
+              audience and sets you apart from the competition.
+            </p>
+            <a href="#">
+              <em>Learn More</em>
+            </a>
+          </motion.div>
+        </div>
+
+        <motion.div
+          className="section-divider"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
-        >
-          Our Capabilities
-        </motion.h1>
-        <div className="section-container">
-          <div className="part">
-            <motion.div
-              className="card"
-              initial={{ x: "-100vw", opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-            >
-              <h2>Custom Web Design</h2>
-              <p>
-                We craft visually stunning and user-friendly websites that
-                captivate and engage your target audience and drive conversions.
-              </p>
-              <a href="#">
-                <em>Learn More</em>
-              </a>
-            </motion.div>
-            <motion.div
-              className="card"
-              initial={{ x: "-100vw", opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ delay: 0.2, duration: 0.4, ease: "easeInOut" }}
-            >
-              <h2>Brand & Styling Strategies</h2>
-              <p>
-                We establish a strong brand identity that resonates with your
-                audience and sets you apart from the competition.
-              </p>
-              <a href="#">
-                <em>Learn More</em>
-              </a>
-            </motion.div>
-          </div>
+          transition={{ delay: 0.3, duration: 0.4, ease: "easeInOut" }}
+        ></motion.div>
 
+        <div className="part">
           <motion.div
-            className="section-divider"
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.3, duration: 0.4, ease: "easeInOut" }}
-          ></motion.div>
-
-          <div className="part">
-            <motion.div
-              className="card"
-              initial={{ x: "-100vw", opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ delay: 0.4, duration: 0.6, ease: "easeInOut" }}
-            >
-              <h2>AI-Powered Design</h2>
-              <p>
-                We stay ahead of the curve by incorporating cutting-edge AI
-                tools to optimize user experience, personalize content, and
-                enhance efficiency.
-              </p>
-              <a href="#">
-                <em>Learn More</em>
-              </a>
-            </motion.div>
-            <motion.div
-              className="card"
-              initial={{ x: "-100vw", opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ delay: 0.5, duration: 0.6, ease: "easeInOut" }}
-            >
-              <h2>Search Engine Marketing</h2>
-              <p>
-                We equip you with the tools and strategies to increase your
-                online visibility and attract qualified leads.
-              </p>
-              <a href="#">
-                <em>Learn More</em>
-              </a>
-            </motion.div>
-          </div>
-
+            className="card"
+            initial={{ x: "-100vw", opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{ delay: 0.4, duration: 0.6, ease: "easeInOut" }}
+          >
+            <h2>AI-Powered Design</h2>
+            <p>
+              We stay ahead of the curve by incorporating cutting-edge AI tools
+              to optimize user experience, personalize content, and enhance
+              efficiency.
+            </p>
+            <a href="#">
+              <em>Learn More</em>
+            </a>
+          </motion.div>
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ delay: 0.6, duration: 0.4, ease: "easeInOut" }}
-            className="section-divider"
-          ></motion.div>
+            className="card"
+            initial={{ x: "-100vw", opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{ delay: 0.5, duration: 0.6, ease: "easeInOut" }}
+          >
+            <h2>Search Engine Marketing</h2>
+            <p>
+              We equip you with the tools and strategies to increase your online
+              visibility and attract qualified leads.
+            </p>
+            <a href="#">
+              <em>Learn More</em>
+            </a>
+          </motion.div>
+        </div>
 
-          <div className="part">
-            <motion.div
-              className="card"
-              initial={{ x: "-100vw", opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ delay: 0.7, duration: 0.6, ease: "easeInOut" }}
-            >
-              <h2>Responsive Web Design</h2>
-              <p>
-                Your website will look flawless and function optimally across
-                all devices, from desktops to mobile phones and tablets.
-              </p>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ delay: 0.6, duration: 0.4, ease: "easeInOut" }}
+          className="section-divider"
+        ></motion.div>
 
-              <a href="#">
-                <em>Learn More</em>
-              </a>
-            </motion.div>
-            <motion.div
-              className="card"
-              initial={{ x: "-100vw", opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
-              transition={{ delay: 0.8, duration: 0.6, ease: "easeInOut" }}
-            >
-              <h2>Maintenance & Analytics</h2>
-              <p>
-                Just like a well-oiled machine, your website requires ongoing
-                maintenance and analysis to function optimally.
-              </p>
-              <a href="#">
-                <em>Learn More</em>
-              </a>
-            </motion.div>
-          </div>
+        <div className="part">
+          <motion.div
+            className="card"
+            initial={{ x: "-100vw", opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{ delay: 0.7, duration: 0.6, ease: "easeInOut" }}
+          >
+            <h2>Responsive Web Design</h2>
+            <p>
+              Your website will look flawless and function optimally across all
+              devices, from desktops to mobile phones and tablets.
+            </p>
+
+            <a href="#">
+              <em>Learn More</em>
+            </a>
+          </motion.div>
+          <motion.div
+            className="card"
+            initial={{ x: "-100vw", opacity: 0 }}
+            animate={isInView ? { x: 0, opacity: 1 } : {}}
+            transition={{ delay: 0.8, duration: 0.6, ease: "easeInOut" }}
+          >
+            <h2>Maintenance & Analytics</h2>
+            <p>
+              Just like a well-oiled machine, your website requires ongoing
+              maintenance and analysis to function optimally.
+            </p>
+            <a href="#">
+              <em>Learn More</em>
+            </a>
+          </motion.div>
         </div>
       </div>
     </div>
