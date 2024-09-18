@@ -42,7 +42,7 @@ header {
   border: none;
   background-color: transparent;
   position: absolute;
-  top: 75%;
+  bottom: 5%;
   left: 50%;
   transform: translateX(50%);
   cursor: pointer;
