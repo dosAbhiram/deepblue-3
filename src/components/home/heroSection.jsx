@@ -16,16 +16,16 @@ function HeroSection() {
       transition={{ duration: 0.7 }}
     >
       <div className="banner-wrapper">
-        <div className="banner-section">
+        <div className="banner-caption">
           <h1>
             Unleashing the Power of <b>AI</b> for Cutting-Edge{" "}
             <b>Web Design.</b>
           </h1>
         </div>
-        <button className="scroll-button" onClick={handleScroll}>
-          <img src="icons/down.png" alt="Scroll Down" />
-        </button>
       </div>
+      <button className="scroll-button" onClick={handleScroll}>
+        <img src="icons/down.png" alt="Scroll Down" />
+      </button>
     </motion.header>
   );
 }
