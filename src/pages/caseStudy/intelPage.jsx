@@ -6,18 +6,20 @@ function IntelCaseStudy() {
     <>
       <div className="background1"></div>
       <div className="background2">
-        <h2>
-          D E E P B L U E was brought on board to create a brand new website for
-          Intel that highlights their commitment to open source.
-        </h2>
+        <div className="two-content">
+          <h2>
+            D E E P B L U E was brought on board to create a brand new website
+            for Intel that highlights their commitment to open source.
+          </h2>
+        </div>
       </div>
       <div className="background3">
         <motion.div
           className="three-content"
-          initial={{ opacity: 0, y: "-50vh" }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: "-25vw" }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4, duration: 0.6, ease: easeInOut }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           <h2>Built using WordPress, The leading open source CMS.</h2>
           <div className="three-divider"></div>
@@ -43,6 +45,7 @@ function IntelCaseStudy() {
 
         <div style={{ width: "40vw" }}></div>
       </div>
+
       <div className="background4">
         <motion.div
           className="phone1"
@@ -51,6 +54,7 @@ function IntelCaseStudy() {
           transition={{ type: "spring", stiffness: 50, damping: 15 }}
           viewport={{ once: true }}
         ></motion.div>
+
         <motion.div
           className="phone2"
           initial={{ opacity: 0, y: "50vh" }}
@@ -58,11 +62,12 @@ function IntelCaseStudy() {
           transition={{ type: "spring", stiffness: 50, damping: 15 }}
           viewport={{ once: true }}
         ></motion.div>
+
         <motion.div
           className="four-content"
-          initial={{ opacity: 0, y: "50vh" }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: easeInOut }}
+          initial={{ opacity: 0, x: "25vw" }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4, duration: 0.6, ease: easeInOut }}
           viewport={{ once: true }}
         >
           <h2>Intel was certified ADA & W3C-compliant.</h2>
