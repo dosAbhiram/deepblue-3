@@ -1,56 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* SECTION 1 */
-.section1 {
+.section1-homepage {
   background-color: #ffffff;
   color: #252525;
   font-family: "Raleway", sans-serif;
   display: flex;
-  padding: 30px 0;
+  padding: 76px 0;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
-.content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.width-container {
+  margin: 0px auto;
+  max-width: 1200px;
   width: 100%;
   height: 100%;
-  padding: 0 15px;
 }
 
-.left-content,
-.right-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.section1-left-content,
+.section1-right-content {
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-
-.right-content {
-  text-align: left;
-  font-size: 18px;
-  line-height: 28px;
-  color: #393939;
-  font-weight: 500;
+.section1-left-content {
+  width: 40%;
 }
-
-.section1 h2 {
+.section1-right-content {
+  width: 60%;
+}
+.section1-homepage h2 {
   font-size: 50px;
   line-height: 67px;
   font-weight: 500;
   color: #393939;
 }
 
-.section1 span {
+.section1-homepage span {
   color: #27598c;
 }
 
-.section1 p {
+.section1-homepage p {
   font-size: 18px;
   line-height: 28px;
   color: #393939;
@@ -59,36 +51,24 @@
   font-weight: 500;
 }
 
-.section p b {
+.section1-homepage p b {
   font-weight: 700;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  color: #252525;
 }
 
 @media (max-width: 768px) {
-  .content-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-content,
-  .right-content {
+  .section1-left-content,
+  .section1-right-content {
     max-width: 100%;
     text-align: center;
   }
-
-  .right-content {
-    text-align: center;
+  .section1-homepage {
+    flex-direction: column;
   }
-
-  .section1 {
-    height: auto;
-  }
-  .section1 h2 {
+  .section1-homepage h2 {
     font-size: 30px;
     line-height: 40px;
   }
-  .section p {
+  .section1-homepage p {
     margin-bottom: 20px;
   }
 }

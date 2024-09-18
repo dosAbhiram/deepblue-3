@@ -5,16 +5,16 @@ import { useRef, useEffect } from "react";
 
 function Section() {
   return (
-    <div className="section1">
-      <div className="content-wrapper">
-        <div className="left-content">
+    <div className="width-container">
+      <div className="section1-homepage">
+        <div className="section1-left-content">
           <h2>
             Atlanta Web Design.
             <br />
             <span>est. 1999.</span>
           </h2>
         </div>
-        <div className="right-content">
+        <div className="section1-right-content">
           <p>
             <b>DEEPBLUE</b> is an award-winning, ADA-compliant web design
             agency, established in 1999. We leverage the power of{" "}
