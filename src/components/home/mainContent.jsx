@@ -43,7 +43,6 @@ function ParallaxSection() {
     </section>
   );
 }
-
 function Section2() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
@@ -52,7 +51,7 @@ function Section2() {
       <motion.h1
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         Our Capabilities
       </motion.h1>
@@ -61,7 +60,7 @@ function Section2() {
           className="part"
           initial={{ x: "-100vw", opacity: 0 }}
           animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.5, ease: "linear" }}
+          transition={{ duration: 0.4, ease: "easeInOut" }}
         >
           <div className="card">
             <h2>Custom Web Design</h2>
@@ -89,14 +88,14 @@ function Section2() {
           className="section-divider"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.5, duration: 0.5, ease: "linear" }}
+          transition={{ delay: 0.3, duration: 0.3, ease: "easeInOut" }}
         ></motion.div>
 
         <motion.div
           className="part"
           initial={{ x: "-100vw", opacity: 0 }}
           animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{ delay: 1, duration: 0.5, ease: "linear" }}
+          transition={{ delay: 0.5, duration: 0.4, ease: "easeInOut" }}
         >
           <div className="card">
             <h2>AI-Powered Design</h2>
@@ -124,7 +123,7 @@ function Section2() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ delay: 1.5, duration: 0.5, ease: "linear" }}
+          transition={{ delay: 0.7, duration: 0.3, ease: "easeInOut" }}
           className="section-divider"
         ></motion.div>
 
@@ -132,7 +131,7 @@ function Section2() {
           className="part"
           initial={{ x: "-100vw", opacity: 0 }}
           animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{ delay: 1.5, duration: 0.5, ease: "linear" }}
+          transition={{ delay: 0.8, duration: 0.4, ease: "easeInOut" }}
         >
           <div className="card">
             <h2>Responsive Web Design</h2>
@@ -149,7 +148,7 @@ function Section2() {
             <h2>Maintenance & Analytics</h2>
             <p>
               Just like a well-oiled machine, your website requires ongoing
-              maintenance and analysis to function optimally
+              maintenance and analysis to function optimally.
             </p>
             <a href="#">
               <em>Learn More</em>
@@ -160,7 +159,6 @@ function Section2() {
     </div>
   );
 }
-
 function Clients() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0 });
@@ -181,7 +179,7 @@ function Clients() {
             opacity: 0,
           }}
           animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
           className="row1"
         >
           <img src="images/client-section/Intel-1.png.webp" alt="Intel" />
@@ -191,7 +189,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.9, ease: "easeInOut" }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img src="images/client-section/JHU.png.webp" alt="JHU" />
@@ -201,7 +199,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.9, ease: "easeInOut" }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img src="images/client-section/nasa.png.webp" alt="NASA" />
@@ -211,7 +209,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.9, ease: "easeInOut" }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img
@@ -226,7 +224,7 @@ function Clients() {
             opacity: 0,
           }}
           animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 1, duration: 0.9, ease: "easeInOut" }}
+          transition={{ delay: 0.7, duration: 0.6, ease: "easeInOut" }}
           style={{ height: "1px", width: "100vw", backgroundColor: "white" }}
         ></motion.div>
 
@@ -237,7 +235,7 @@ function Clients() {
             opacity: 0,
           }}
           animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 2, duration: 1, ease: "easeInOut" }}
+          transition={{ delay: 1.4, duration: 0.7, ease: "easeInOut" }}
           className="row1"
         >
           <img src="images/client-section/sports-club.png" alt="Sports Club" />
@@ -247,7 +245,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 2, duration: 0.9, ease: "easeInOut" }}
+            transition={{ delay: 1.4, duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img src="images/client-section/Airbus.png" alt="Airbus" />
@@ -257,7 +255,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 2, duration: 0.9, ease: "easeInOut" }}
+            transition={{ delay: 1.4, duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img src="images/client-section/usc.png" alt="USC" />
@@ -267,7 +265,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 2, duration: 0.9, ease: "easeInOut" }}
+            transition={{ delay: 1.4, duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img src="images/client-section/ta.png" alt="TA" />
@@ -279,7 +277,7 @@ function Clients() {
             opacity: 0,
           }}
           animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 2.5, duration: 0.9, ease: "easeInOut" }}
+          transition={{ delay: 2, duration: 0.6, ease: "easeInOut" }}
           style={{ height: "1px", width: "100vw", backgroundColor: "white" }}
         ></motion.div>
 
@@ -290,7 +288,7 @@ function Clients() {
             opacity: 0,
           }}
           animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 3.5, duration: 1, ease: "easeInOut" }}
+          transition={{ delay: 2.7, duration: 0.7, ease: "easeInOut" }}
           className="row1"
         >
           <img
@@ -303,7 +301,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 3.5, duration: 0.9, ease: "easeInOut" }}
+            transition={{ delay: 2.7, duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img src="images/client-section/atlanta-web-design-5.png" alt="EPA" />
@@ -313,7 +311,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 3.5, duration: 0.9, ease: "easeInOut" }}
+            transition={{ delay: 2.7, duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img
@@ -326,7 +324,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 3.5, duration: 0.9, ease: "easeInOut" }}
+            transition={{ delay: 2.7, duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img
@@ -341,7 +339,7 @@ function Clients() {
             opacity: 0,
           }}
           animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 3.5, duration: 0.9, ease: "easeInOut" }}
+          transition={{ delay: 3.3, duration: 0.6, ease: "easeInOut" }}
           style={{ height: "1px", width: "100vw", backgroundColor: "white" }}
         ></motion.div>
 
@@ -352,7 +350,7 @@ function Clients() {
             opacity: 0,
           }}
           animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 4.5, duration: 1, ease: "easeInOut" }}
+          transition={{ delay: 3.9, duration: 0.7, ease: "easeInOut" }}
           className="row1"
         >
           <img
@@ -365,7 +363,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 4.5, duration: 0.9, ease: "easeInOut" }}
+            transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img src="images/client-section/NCI.png.webp" alt="NCI" />
@@ -375,7 +373,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 4.5, duration: 0.9, ease: "easeInOut" }}
+            transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img src="images/client-section/disa.png.webp" alt="Disa" />
@@ -385,7 +383,7 @@ function Clients() {
               opacity: 0,
             }}
             animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 4.5, duration: 0.9, ease: "easeInOut" }}
+            transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut" }}
             className="smallDiv"
           ></motion.div>
           <img

@@ -1,5 +1,5 @@
 import "../../assets/styles/work/caseStudy/intelPage.css";
-import { easeIn, motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 function IntelCaseStudy() {
   return (
@@ -16,8 +16,8 @@ function IntelCaseStudy() {
           className="three-content"
           initial={{ opacity: 0, y: "-50vh" }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: easeIn }}
-          viewport={{ once: true }} // Ensures the animation triggers only once
+          transition={{ delay: 0.4, duration: 0.6, ease: easeInOut }}
+          viewport={{ once: true }}
         >
           <h2>Built using WordPress, The leading open source CMS.</h2>
           <div className="three-divider"></div>
@@ -32,8 +32,13 @@ function IntelCaseStudy() {
           className="nest"
           initial={{ opacity: 0, y: "-50vh" }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 80 }}
-          viewport={{ once: true }} // Ensures the animation triggers only once
+          transition={{
+            delay: 0.5,
+            type: "spring",
+            stiffness: 50,
+            damping: 15,
+          }}
+          viewport={{ once: true }}
         ></motion.div>
 
         <div style={{ width: "40vw" }}></div>
@@ -43,21 +48,21 @@ function IntelCaseStudy() {
           className="phone1"
           initial={{ opacity: 0, y: "50vh" }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 80 }}
+          transition={{ type: "spring", stiffness: 50, damping: 15 }}
           viewport={{ once: true }}
         ></motion.div>
         <motion.div
           className="phone2"
           initial={{ opacity: 0, y: "50vh" }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 80 }}
+          transition={{ type: "spring", stiffness: 50, damping: 15 }}
           viewport={{ once: true }}
         ></motion.div>
         <motion.div
           className="four-content"
           initial={{ opacity: 0, y: "50vh" }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: easeIn }}
+          transition={{ duration: 0.6, ease: easeInOut }}
           viewport={{ once: true }}
         >
           <h2>Intel was certified ADA & W3C-compliant.</h2>
