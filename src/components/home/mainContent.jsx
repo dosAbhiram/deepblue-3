@@ -1,7 +1,7 @@
 import "../../assets/styles/home/main.css";
 import "../../assets/styles/parallaxSection.css";
-import { motion, useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 function Section() {
   return (
@@ -57,8 +57,12 @@ function ParallaxSection() {
   );
 }
 function Section2() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
   return (
-    <section className="capabilities">
+    <section className="capabilities" ref={ref}>
       <div className="inner-heading">
         <div className="width-container">
           <p>Our Services /</p>
@@ -70,7 +74,7 @@ function Section2() {
           <motion.div
             className="column-container"
             initial={{ x: "-100vw", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            animate={inView ? { x: 0, opacity: 1 } : {}}
             onViewportEnter={() => console.log("In view")}
             transition={{ duration: 0.7, ease: "linear" }}
           >
@@ -88,7 +92,7 @@ function Section2() {
           <motion.div
             className="column-container"
             initial={{ x: "-100vw", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ delay: 0.5, duration: 0.7, ease: "linear" }}
           >
             <div className="column-inner">
@@ -106,7 +110,7 @@ function Section2() {
           <motion.div
             className="column-container"
             initial={{ x: "-100vw", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ delay: 1, duration: 0.7, ease: "linear" }}
           >
             <div className="column-inner border-none">
@@ -128,7 +132,7 @@ function Section2() {
           <motion.div
             className="column-container"
             initial={{ x: "-100vw", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.7, ease: "linear" }}
           >
             <div className="column-inner">
@@ -147,7 +151,7 @@ function Section2() {
           <motion.div
             className="column-container"
             initial={{ x: "-100vw", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ delay: 0.5, duration: 0.7, ease: "linear" }}
           >
             <div className="column-inner">
@@ -166,7 +170,7 @@ function Section2() {
           <motion.div
             className="column-container"
             initial={{ x: "-100vw", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ delay: 1, duration: 0.7, ease: "linear" }}
           >
             <div className="column-inner border-none">
@@ -187,238 +191,130 @@ function Section2() {
     </section>
   );
 }
-
 function Clients() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0 });
-
-  useEffect(() => {
-    console.log("Element is in view: ", isInView);
-  }, [isInView]);
-
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
   return (
-    <div className="client-container">
-      <p>Featured Web Design Clients /</p>
-
-      <div className="insideContainer" ref={ref}>
-        {/* First row */}
+    <div className="client-container" ref={ref}>
+      <div className="width-container">
+        <div className="client-row1">
+          <p>Featured Web Design Clients /</p>
+        </div>
+        {/* row1 */}
         <motion.div
-          initial={{
-            x: "-100vw",
-            opacity: 0,
-          }}
-          animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.7, ease: "easeInOut" }}
-          className="row1"
+          className="client-row2"
+          initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+          animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+          transition={{ duration: 1, ease: "easeIn" }}
         >
-          <img src="images/client-section/Intel-1.png.webp" alt="Intel" />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img src="images/client-section/JHU.png.webp" alt="JHU" />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img src="images/client-section/nasa.png.webp" alt="NASA" />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img
-            src="images/client-section/Continental-1.png.webp"
-            alt="Continental"
-          />
+          <div className="image wrapper">
+            <img src="images/client-section/Intel-1.png.webp" alt="Intel" />
+          </div>
+          <div className="image-wrapper">
+            <img src="images/client-section/JHU.png.webp" alt="JHU" />
+          </div>
+
+          <div className="image-wrapper">
+            <img src="images/client-section/nasa.png.webp" alt="NASA" />
+          </div>
+
+          <div className="image-wrapper">
+            <img
+              src="images/client-section/Continental-1.png.webp"
+              alt="Continental"
+            />
+          </div>
+        </motion.div>
+        {/* row2 */}
+        <motion.div
+          className="client-row2"
+          initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+          animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+          transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}
+        >
+          <div className="image wrapper">
+            <img
+              src="images/client-section/sports-club.png"
+              alt="Sports Club"
+            />
+          </div>
+          <div className="image-wrapper">
+            <img src="images/client-section/Airbus.png" alt="Airbus" />
+          </div>
+
+          <div className="image-wrapper">
+            <img src="images/client-section/usc.png" alt="USC" />
+          </div>
+
+          <div className="image-wrapper">
+            <img src="images/client-section/ta.png" alt="TA" />
+          </div>
+        </motion.div>
+        {/* row3 */}
+        <motion.div
+          className="client-row2"
+          initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+          animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+          transition={{ delay: 1, duration: 1, ease: "easeIn" }}
+        >
+          <div className="image wrapper">
+            <img
+              src="images/client-section/atlanta-web-design-4.png"
+              alt="Save Our Seas"
+            />
+          </div>
+          <div className="image-wrapper">
+            <img
+              src="images/client-section/atlanta-web-design-5.png"
+              alt="EPA"
+            />
+          </div>
+
+          <div className="image-wrapper">
+            <img
+              src="images/client-section/atlanta-web-design-6.png"
+              alt="Mazda"
+            />
+          </div>
+
+          <div className="image-wrapper">
+            <img
+              src="images/client-section/atlanta-web-design-7.png"
+              alt="UCDavis"
+            />
+          </div>
         </motion.div>
 
+        {/* row4 */}
         <motion.div
-          initial={{
-            x: "-100vw",
-            opacity: 0,
-          }}
-          animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 0.7, duration: 0.6, ease: "easeInOut" }}
-          style={{ height: "1px", width: "100vw", backgroundColor: "white" }}
-        ></motion.div>
-
-        {/* Second row */}
-        <motion.div
-          initial={{
-            x: "-100vw",
-            opacity: 0,
-          }}
-          animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 1.4, duration: 0.7, ease: "easeInOut" }}
-          className="row1"
+          className="client-row2"
+          style={{ border: "none" }}
+          initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+          animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+          transition={{ delay: 1.5, duration: 1, ease: "easeIn" }}
         >
-          <img src="images/client-section/sports-club.png" alt="Sports Club" />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 1.4, duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img src="images/client-section/Airbus.png" alt="Airbus" />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 1.4, duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img src="images/client-section/usc.png" alt="USC" />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 1.4, duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img src="images/client-section/ta.png" alt="TA" />
-        </motion.div>
+          <div className="image wrapper">
+            <img
+              src="images/client-section/sweetwater2.png.webp"
+              alt="Sweetwater"
+            />
+          </div>
+          <div className="image-wrapper">
+            <img src="images/client-section/NCI.png.webp" alt="NCI" />
+          </div>
 
-        <motion.div
-          initial={{
-            x: "-100vw",
-            opacity: 0,
-          }}
-          animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 2, duration: 0.6, ease: "easeInOut" }}
-          style={{ height: "1px", width: "100vw", backgroundColor: "white" }}
-        ></motion.div>
+          <div className="image-wrapper">
+            <img src="images/client-section/disa.png.webp" alt="Disa" />
+          </div>
 
-        {/* Third row */}
-        <motion.div
-          initial={{
-            x: "-100vw",
-            opacity: 0,
-          }}
-          animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 2.7, duration: 0.7, ease: "easeInOut" }}
-          className="row1"
-        >
-          <img
-            src="images/client-section/atlanta-web-design-4.png"
-            alt="Save Our Seas"
-          />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 2.7, duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img src="images/client-section/atlanta-web-design-5.png" alt="EPA" />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 2.7, duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img
-            src="images/client-section/atlanta-web-design-6.png"
-            alt="Mazda"
-          />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 2.7, duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img
-            src="images/client-section/atlanta-web-design-7.png"
-            alt="UCDavis"
-          />
-        </motion.div>
-
-        <motion.div
-          initial={{
-            x: "-100vw",
-            opacity: 0,
-          }}
-          animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 3.3, duration: 0.6, ease: "easeInOut" }}
-          style={{ height: "1px", width: "100vw", backgroundColor: "white" }}
-        ></motion.div>
-
-        {/* Fourth row */}
-        <motion.div
-          initial={{
-            x: "-100vw",
-            opacity: 0,
-          }}
-          animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-          transition={{ delay: 3.9, duration: 0.7, ease: "easeInOut" }}
-          className="row1"
-        >
-          <img
-            src="images/client-section/sweetwater2.png.webp"
-            alt="Sweetwater"
-          />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img src="images/client-section/NCI.png.webp" alt="NCI" />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img src="images/client-section/disa.png.webp" alt="Disa" />
-          <motion.div
-            initial={{
-              x: "-100vw",
-              opacity: 0,
-            }}
-            animate={isInView ? { x: 0, y: 0, opacity: 1 } : {}}
-            transition={{ delay: 3.9, duration: 0.6, ease: "easeInOut" }}
-            className="smallDiv"
-          ></motion.div>
-          <img
-            src="images/client-section/medicalcity.png.webp"
-            alt="Medical City"
-          />
+          <div className="image-wrapper">
+            <img
+              src="images/client-section/medicalcity.png.webp"
+              alt="Medical City"
+            />
+          </div>
         </motion.div>
       </div>
     </div>
@@ -426,115 +322,85 @@ function Clients() {
 }
 
 function AwardSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
-
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
   return (
-    <div className="award-container">
-      <p className="heading">Awards & Certifications /</p>
-      <div className="awards" ref={ref}>
-        <motion.div
-          className="award"
-          initial={{ x: "-100vw", opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{
-            duration: 1.5,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
-        >
-          <img src="images/awards/awwwards-home.png.webp" alt="Awwwards" />
-          <p>Awwwards Winner</p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          style={{ height: "25vh", backgroundColor: "black", width: "1px" }}
-          transition={{ delay: 1.5, duration: 0.5, ease: "linear" }}
-          className="awardDiv"
-        ></motion.div>
+    <div className="award-container" ref={ref}>
+      <div className="width-container">
+        <div className="heading">
+          <p>Awards & Certifications /</p>
+        </div>
+        <div className="awards-wrapper">
+          <motion.div
+            className="award"
+            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="innerAward">
+              <img src="images/awards/awwwards-home.png.webp" alt="Awwwards" />
+              <p>Awwwards Winner</p>
+            </div>
+          </motion.div>
 
-        <motion.div
-          className="award"
-          initial={{ x: "-100vw", opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{
-            duration: 1.7,
-            ease: [0.25, 0.1, 0.25, 1],
-            delay: 0.2,
-          }}
-        >
-          <img
-            src="images/awards/best-web-design.png.webp"
-            alt="Best Web Design"
-          />
-          <p>Best Web Design</p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          style={{ height: "25vh", backgroundColor: "black", width: "1px" }}
-          transition={{ delay: 1.7, duration: 0.5, ease: "linear" }}
-          className="awardDiv"
-        ></motion.div>
-        <motion.div
-          className="award"
-          initial={{ x: "-100vw", opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{
-            duration: 1.9,
-            ease: [0.25, 0.1, 0.25, 1],
-            delay: 0.4,
-          }}
-        >
-          <img src="images/awards/webbys-home.png.webp" alt="Webby Award" />
-          <p>Webby Award Winner</p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          style={{ height: "25vh", backgroundColor: "black", width: "1px" }}
-          transition={{ delay: 1.9, duration: 0.5, ease: "linear" }}
-          className="awardDiv"
-        ></motion.div>
-        <motion.div
-          className="award"
-          initial={{ x: "-100vw", opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{
-            duration: 2.1,
-            ease: [0.25, 0.1, 0.25, 1],
-            delay: 0.6,
-          }}
-        >
-          <img
-            src="images/awards/GSA_home.png.webp"
-            alt="GSA Contract Holder"
-          />
-          <p>GSA Contract Holder</p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : {}}
-          style={{ height: "25vh", backgroundColor: "black", width: "1px" }}
-          transition={{ delay: 2.1, duration: 0.5, ease: "linear" }}
-          className="awardDiv"
-        ></motion.div>
-        <motion.div
-          className="award"
-          initial={{ x: "-100vw", opacity: 0 }}
-          animate={isInView ? { x: 0, opacity: 1 } : {}}
-          transition={{
-            duration: 2.3, // Slower animation
-            ease: [0.25, 0.1, 0.25, 1],
-            delay: 0.8,
-          }}
-        >
-          <img
-            src="images/awards/508c.png.webp"
-            alt="ADA Disabilities Compliant"
-          />
-          <p>ADA Disabilities Compliant</p>
-        </motion.div>
+          <motion.div
+            className="award"
+            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="innerAward">
+              <img
+                src="images/awards/best-web-design.png.webp"
+                alt="Best Web Design"
+              />
+              <p>Best Web Design</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="award"
+            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="innerAward">
+              <img src="images/awards/webbys-home.png.webp" alt="Webby Award" />
+              <p>Webby Award Winner</p>
+            </div>
+          </motion.div>
+          <motion.div
+            className="award"
+            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="innerAward">
+              <img
+                src="images/awards/GSA_home.png.webp"
+                alt="GSA Contract Holder"
+              />
+              <p>GSA Contract Holder</p>
+            </div>
+          </motion.div>
+          <motion.div
+            className="award"
+            style={{ border: "none" }}
+            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="innerAward">
+              <img
+                src="images/awards/508c.png.webp"
+                alt="ADA Disabilities Compliant"
+              />
+              <p>ADA Disabilities Compliant</p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
