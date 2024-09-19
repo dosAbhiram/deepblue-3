@@ -1,45 +1,28 @@
 .parallax-section {
-  position: relative;
   height: 700px;
-  width: 100%;
-  background-image: url("/images/backgrounds/image2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: scroll;
+  background: url("/images/backgrounds/image2.jpg") no-repeat scroll;
   background-position: 50% 0;
-  pointer-events: none;
+  background-size: cover;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
 
 .parallax-inner {
-  box-sizing: border-box;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0 15px;
   width: 100%;
 }
 
 .parallax-inner h2 {
-  font-size: 50px;
-  color: #ffffff;
-  line-height: 69px;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  color: #fff;
 }
 
 .parallax-inner p {
-  text-align: center;
-  color: #fff;
-  font-family: "Raleway", sans-serif;
-  font-style: none;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
+  color: #fff;
 }
+
 .parallax-section-2 {
   position: relative;
   height: 700px;

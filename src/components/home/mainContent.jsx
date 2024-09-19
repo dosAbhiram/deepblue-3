@@ -5,29 +5,33 @@ import { useRef, useEffect } from "react";
 
 function Section() {
   return (
-    <div className="width-container">
-      <div className="section1-homepage">
-        <div className="section1-left-content">
-          <h2>
-            Atlanta Web Design.
-            <br />
-            <span>est. 1999.</span>
-          </h2>
-        </div>
-        <div className="section1-right-content">
-          <p>
-            <b>DEEPBLUE</b> is an award-winning, ADA-compliant web design
-            agency, established in 1999. We leverage the power of{" "}
-            <b>Artificial Intelligence (A.I.)</b> to deliver exceptional{" "}
-            <b>user experiences, better efficiency</b> and{" "}
-            <b>measurable results</b> for businesses of all sizes.
-          </p>
-          <p>
-            With offices in <b>Atlanta</b>, with offices in <b>San Francisco</b>
-            , we serve a diverse clientele, including technology innovators,
-            non-profit organizations, government agencies, academic
-            institutions, and forward-thinking businesses.
-          </p>
+    <div className="section1-container">
+      <div className="width-container">
+        <div className="section1-homepage">
+          <div className="section1-left-content">
+            <h2>
+              Atlanta Web Design.
+              <br />
+              <span>est. 1999.</span>
+            </h2>
+          </div>
+          <div className="section1-right-content">
+            <p>
+              <strong>DEEPBLUE</strong> is an award-winning, ADA-compliant web
+              design agency, established in 1999. We leverage the power of{" "}
+              <strong>Artificial Intelligence (A.I.)</strong> to deliver
+              exceptional <strong>user experiences, better efficiency</strong>{" "}
+              and <strong>measurable results</strong> for businesses of all
+              sizes.
+            </p>
+            <p>
+              With offices in <strong>Atlanta</strong>, with offices in{" "}
+              <strong>San Francisco</strong>, we serve a diverse clientele,
+              including technology innovators, non-profit organizations,
+              government agencies, academic institutions, and forward-thinking
+              businesses.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -45,7 +49,7 @@ function ParallaxSection() {
         </div>
         <div className="width-container">
           <p>
-            <i>- Kahlil Gibran –</i>
+            <em>- Kahlil Gibran –</em>
           </p>
         </div>
       </div>
@@ -62,7 +66,7 @@ function Section2() {
         </div>
       </div>
       <div className="width-container">
-        <div className="capabilities-row-1">
+        <div className="capabilities-row">
           <motion.div
             className="column-container"
             initial={{ x: "-100vw", opacity: 0 }}
@@ -105,7 +109,7 @@ function Section2() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 1, duration: 0.7, ease: "linear" }}
           >
-            <div className="column-inner" style={{ border: "none" }}>
+            <div className="column-inner border-none">
               <h3 className="column-heading">Responsive Web Design</h3>
               <p className="column-content">
                 Your website will look flawless and function optimally across
@@ -120,7 +124,7 @@ function Section2() {
         </div>
       </div>
       <div className="width-container">
-        <div className="capabilities-row-1">
+        <div className="capabilities-row">
           <motion.div
             className="column-container"
             initial={{ x: "-100vw", opacity: 0 }}
@@ -165,7 +169,7 @@ function Section2() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 1, duration: 0.7, ease: "linear" }}
           >
-            <div className="column-inner" style={{ border: "none" }}>
+            <div className="column-inner border-none">
               <h3 className="column-heading column-heading-padding">
                 Maintenance & Analytics
               </h3>
