@@ -1,40 +1,44 @@
 .parallax-section {
   position: relative;
   height: 700px;
+  width: 100%;
   background-image: url("/images/backgrounds/image2.jpg");
-  background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: scroll;
+  background-position: 50% 0;
+  pointer-events: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
   text-align: center;
 }
 
-.parallax-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Raleway";
-  padding: 20px;
-  border-radius: 10px;
+.parallax-inner {
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
 }
 
-.parallax-content h2 {
-  font-size: clamp(2rem, 5vw, 4rem);
+.parallax-inner h2 {
+  font-size: 50px;
+  color: #ffffff;
+  line-height: 69px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
-  margin-bottom: 20px;
+  font-style: normal;
 }
 
-.parallax-content p {
+.parallax-inner p {
   text-align: center;
-  align-items: center;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  line-height: 1.6;
-  max-width: 800px;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-style: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
 }
 .parallax-section-2 {
   position: relative;
