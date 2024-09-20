@@ -113,7 +113,7 @@ function Section2() {
             animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ delay: 1.6, duration: 1, ease: "easeIn" }}
           >
-            <div className="column-inner border-none">
+            <div className="column-inner" style={{ border: "none" }}>
               <h3 className="column-heading">Responsive Web Design</h3>
               <p className="column-content">
                 Your website will look flawless and function optimally across
@@ -133,7 +133,7 @@ function Section2() {
             className="column-container"
             initial={{ x: "-33vw", opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
-            transition={{ delay: 0.2, duration: 1, ease: "easeIn" }}
+            transition={{ duration: 1, ease: "easeIn" }}
           >
             <div className="column-inner">
               <h3 className="column-heading column-heading-padding">
@@ -152,7 +152,7 @@ function Section2() {
             className="column-container"
             initial={{ x: "-33vw", opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
-            transition={{ delay: 1, duration: 1, ease: "easeIn" }}
+            transition={{ delay: 0.8, duration: 1, ease: "easeIn" }}
           >
             <div className="column-inner">
               <h3 className="column-heading column-heading-padding">
@@ -171,9 +171,9 @@ function Section2() {
             className="column-container"
             initial={{ x: "-33vw", opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
-            transition={{ delay: 1.8, duration: 1, ease: "easeIn" }}
+            transition={{ delay: 1.6, duration: 1, ease: "easeIn" }}
           >
-            <div className="column-inner border-none">
+            <div className="column-inner" style={{ border: "none" }}>
               <h3 className="column-heading column-heading-padding">
                 Maintenance & Analytics
               </h3>
@@ -194,7 +194,7 @@ function Section2() {
 function Clients() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.1,
   });
   return (
     <div className="client-container" ref={ref}>
@@ -209,7 +209,7 @@ function Clients() {
           animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
           transition={{ duration: 1, ease: "easeIn" }}
         >
-          <div className="image wrapper">
+          <div className="image-wrapper">
             <img src="images/client-section/Intel-1.png.webp" alt="Intel" />
           </div>
           <div className="image-wrapper">
@@ -234,7 +234,7 @@ function Clients() {
           animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
           transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}
         >
-          <div className="image wrapper">
+          <div className="image-wrapper">
             <img
               src="images/client-section/sports-club.png"
               alt="Sports Club"
@@ -259,7 +259,7 @@ function Clients() {
           animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
           transition={{ delay: 1, duration: 1, ease: "easeIn" }}
         >
-          <div className="image wrapper">
+          <div className="image-wrapper">
             <img
               src="images/client-section/atlanta-web-design-4.png"
               alt="Save Our Seas"
@@ -289,13 +289,12 @@ function Clients() {
 
         {/* row4 */}
         <motion.div
-          className="client-row2"
-          style={{ border: "none" }}
+          className="client-row3"
           initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
           animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
           transition={{ delay: 1.5, duration: 1, ease: "easeIn" }}
         >
-          <div className="image wrapper">
+          <div className="image-wrapper">
             <img
               src="images/client-section/sweetwater2.png.webp"
               alt="Sweetwater"
@@ -309,7 +308,7 @@ function Clients() {
             <img src="images/client-section/disa.png.webp" alt="Disa" />
           </div>
 
-          <div className="image-wrapper">
+          <div className="image-wrapper-border">
             <img
               src="images/client-section/medicalcity.png.webp"
               alt="Medical City"
@@ -324,7 +323,7 @@ function Clients() {
 function AwardSection() {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.2,
+    threshold: 0.1,
   });
   return (
     <div className="award-container" ref={ref}>
@@ -332,25 +331,20 @@ function AwardSection() {
         <div className="heading">
           <p>Awards & Certifications /</p>
         </div>
-        <div className="awards-wrapper">
-          <motion.div
-            className="award"
-            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
-            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ duration: 0.8 }}
-          >
+        <motion.div
+          className="awards-wrapper"
+          initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+          animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+          transition={{ duration: 1.5 }}
+        >
+          <div className="award">
             <div className="innerAward">
               <img src="images/awards/awwwards-home.png.webp" alt="Awwwards" />
               <p>Awwwards Winner</p>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="award"
-            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
-            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
+          <div className="award">
             <div className="innerAward">
               <img
                 src="images/awards/best-web-design.png.webp"
@@ -358,25 +352,16 @@ function AwardSection() {
               />
               <p>Best Web Design</p>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="award"
-            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
-            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
+          <div className="award">
             <div className="innerAward">
               <img src="images/awards/webbys-home.png.webp" alt="Webby Award" />
               <p>Webby Award Winner</p>
             </div>
-          </motion.div>
-          <motion.div
-            className="award"
-            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
-            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
+          </div>
+
+          <div className="award">
             <div className="innerAward">
               <img
                 src="images/awards/GSA_home.png.webp"
@@ -384,13 +369,9 @@ function AwardSection() {
               />
               <p>GSA Contract Holder</p>
             </div>
-          </motion.div>
-          <motion.div
-            className="award"
-            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
-            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ delay: 0.8, duration: 0.8 }}
-          >
+          </div>
+
+          <div className="award">
             <div className="innerAward">
               <img
                 src="images/awards/508c.png.webp"
@@ -398,27 +379,21 @@ function AwardSection() {
               />
               <p>ADA Disabilities Compliant</p>
             </div>
-          </motion.div>
-          <motion.div
-            className="award"
-            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
-            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ delay: 1, duration: 0.8 }}
-          >
+          </div>
+
+          <div className="award">
             <div className="innerAward" style={{ border: "none" }}>
               <div className="goodFirms">
                 <img
                   src="	https://goodfirms.s3.amazonaws.com/badges/white-sticker/top-website-development-companies.svg"
                   alt="GoodFirms Top Agency"
                   className="goodFirms-img"
-                  style={{}}
                 />
               </div>
-
               <p>GoodFirms Top Agency</p>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
@@ -458,7 +433,11 @@ function BlogSection() {
         <div className="width-container">
           <div className="blog-post">
             <p>ARTIFICIAL INTELLIGENCE</p>
-            <h2>AI: A Game-Changer for Small Bussiness Websites</h2>
+            <h2>
+              <a href="https://deepblue.com/ai-a-game-changer-for-small-business-website/">
+                AI: A Game-Changer for Small Bussiness Websites
+              </a>
+            </h2>
 
             <span className="time">
               August 11,2024 <span className="line">|</span> by Frank Farris

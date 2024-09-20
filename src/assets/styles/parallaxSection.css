@@ -45,4 +45,12 @@
   .parallax-section {
     height: 400px;
   }
+  .parallax-inner h2 {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .parallax-2-inner h2 {
+    font-size: 40px;
+    line-height: 49px;
+  }
 }
