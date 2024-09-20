@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   text-align: center;
+  color: #fff;
 }
 
 .parallax-inner {
@@ -15,31 +16,28 @@
 
 .parallax-inner h2 {
   font-weight: 400;
-  color: #fff;
-}
-
-.parallax-inner p {
-  font-weight: 400;
-  color: #fff;
 }
 
 .parallax-section-2 {
-  position: relative;
-  height: 700px;
-  background-image: url("/images/backgrounds/backgroundImage.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 900px;
+  background: url("/images/backgrounds/backgroundImage.jpg") no-repeat scroll;
+  background-position: 50% 0;
   background-size: cover;
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: #fff;
   text-align: center;
+  color: #fff;
 }
-.divider {
-  background-color: #39393971;
+
+.parallax-2-inner {
+  padding: 0 15px;
+  width: 100%;
 }
+
+.parallax-2-inner h2 {
+  font-weight: 400;
+}
+
 @media (max-width: 768px) {
   .parallax-section-2 {
     height: 400px;

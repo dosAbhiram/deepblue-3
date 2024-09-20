@@ -73,10 +73,10 @@ function Section2() {
         <div className="capabilities-row">
           <motion.div
             className="column-container"
-            initial={{ x: "-100vw", opacity: 0 }}
+            initial={{ x: "-33vw", opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
             onViewportEnter={() => console.log("In view")}
-            transition={{ duration: 0.7, ease: "linear" }}
+            transition={{ duration: 1, ease: "easeIn" }}
           >
             <div className="column-inner">
               <h3 className="column-heading">Custom Web Design</h3>
@@ -91,9 +91,9 @@ function Section2() {
           </motion.div>
           <motion.div
             className="column-container"
-            initial={{ x: "-100vw", opacity: 0 }}
+            initial={{ x: "-33vw", opacity: 0 }} // Adjust to continue from where the first ended
             animate={inView ? { x: 0, opacity: 1 } : {}}
-            transition={{ delay: 0.5, duration: 0.7, ease: "linear" }}
+            transition={{ delay: 0.8, duration: 1, ease: "easeIn" }}
           >
             <div className="column-inner">
               <h3 className="column-heading">AI-Powered Design</h3>
@@ -109,9 +109,9 @@ function Section2() {
           </motion.div>
           <motion.div
             className="column-container"
-            initial={{ x: "-100vw", opacity: 0 }}
+            initial={{ x: "-33vw", opacity: 0 }} // Further adjust for the third column
             animate={inView ? { x: 0, opacity: 1 } : {}}
-            transition={{ delay: 1, duration: 0.7, ease: "linear" }}
+            transition={{ delay: 1.6, duration: 1, ease: "easeIn" }}
           >
             <div className="column-inner border-none">
               <h3 className="column-heading">Responsive Web Design</h3>
@@ -131,9 +131,9 @@ function Section2() {
         <div className="capabilities-row">
           <motion.div
             className="column-container"
-            initial={{ x: "-100vw", opacity: 0 }}
+            initial={{ x: "-33vw", opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.7, ease: "linear" }}
+            transition={{ delay: 0.2, duration: 1, ease: "easeIn" }}
           >
             <div className="column-inner">
               <h3 className="column-heading column-heading-padding">
@@ -150,9 +150,9 @@ function Section2() {
           </motion.div>
           <motion.div
             className="column-container"
-            initial={{ x: "-100vw", opacity: 0 }}
+            initial={{ x: "-33vw", opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
-            transition={{ delay: 0.5, duration: 0.7, ease: "linear" }}
+            transition={{ delay: 1, duration: 1, ease: "easeIn" }}
           >
             <div className="column-inner">
               <h3 className="column-heading column-heading-padding">
@@ -169,9 +169,9 @@ function Section2() {
           </motion.div>
           <motion.div
             className="column-container"
-            initial={{ x: "-100vw", opacity: 0 }}
+            initial={{ x: "-33vw", opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
-            transition={{ delay: 1, duration: 0.7, ease: "linear" }}
+            transition={{ delay: 1.8, duration: 1, ease: "easeIn" }}
           >
             <div className="column-inner border-none">
               <h3 className="column-heading column-heading-padding">
@@ -337,7 +337,7 @@ function AwardSection() {
             className="award"
             initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
             animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
             <div className="innerAward">
               <img src="images/awards/awwwards-home.png.webp" alt="Awwwards" />
@@ -349,7 +349,7 @@ function AwardSection() {
             className="award"
             initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
             animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
           >
             <div className="innerAward">
               <img
@@ -364,7 +364,7 @@ function AwardSection() {
             className="award"
             initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
             animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ delay: 0.4, duration: 0.8 }}
           >
             <div className="innerAward">
               <img src="images/awards/webbys-home.png.webp" alt="Webby Award" />
@@ -375,7 +375,7 @@ function AwardSection() {
             className="award"
             initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
             animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
           >
             <div className="innerAward">
               <img
@@ -387,10 +387,9 @@ function AwardSection() {
           </motion.div>
           <motion.div
             className="award"
-            style={{ border: "none" }}
             initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
             animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ delay: 0.8, duration: 0.8 }}
           >
             <div className="innerAward">
               <img
@@ -398,6 +397,25 @@ function AwardSection() {
                 alt="ADA Disabilities Compliant"
               />
               <p>ADA Disabilities Compliant</p>
+            </div>
+          </motion.div>
+          <motion.div
+            className="award"
+            initial={{ opacity: 0, clipPath: "inset(0 100% 0 0)" }}
+            animate={inView ? { opacity: 1, clipPath: "inset(0 0 0 0%)" } : {}}
+            transition={{ delay: 1, duration: 0.8 }}
+          >
+            <div className="innerAward" style={{ border: "none" }}>
+              <div className="goodFirms">
+                <img
+                  src="	https://goodfirms.s3.amazonaws.com/badges/white-sticker/top-website-development-companies.svg"
+                  alt="GoodFirms Top Agency"
+                  className="goodFirms-img"
+                  style={{}}
+                />
+              </div>
+
+              <p>GoodFirms Top Agency</p>
             </div>
           </motion.div>
         </div>
@@ -409,43 +427,65 @@ function AwardSection() {
 function ParallaxSection2() {
   return (
     <section className="parallax-section-2">
-      <div className="parallax-content">
-        <h2>“Don&apos;t wait any longer,”</h2>
-        <h2>“Dive in the ocean,”</h2>
-        <h2>“Leave and let the sea be you.”</h2>
-        <p>– Rumi –</p>
+      <div className="parallax-2-inner">
+        <div className="width-container">
+          <h2>
+            “Don’t wait any longer.
+            <br />
+            Dive in the ocean,
+            <br />
+            Leave and let the sea be you.”
+          </h2>
+          <p>
+            <em>- Rumi –</em>
+          </p>
+        </div>
       </div>
     </section>
   );
 }
-
 function BlogSection() {
   return (
     <div className="blog-container">
       <div className="blog-title">
-        <p>The Blog /</p>
-      </div>
-      <div className="blog">
-        <div>
-          <h3>ARTIFICIAL INTELLIGENCE</h3>
-          <h1>AI: A Game-Changer for Small Bussiness Websites</h1>
-          <p>August 11,2024 | by Frank Farris</p>
+        <div className="width-container">
+          <div className="blog-title-inner">
+            <p>The Blog /</p>
+          </div>
         </div>
       </div>
-      <div className="divider" style={{ height: "1px", width: "100vw" }}></div>
-      <div className="blog">
-        <div>
-          <h3>BRAND DESIGN</h3>
-          <h1>Typography: The Unsung Hero of Web Design</h1>
-          <p>August 5,2024 | by Antje Knott</p>
+      <div className="blog-section">
+        <div className="width-container">
+          <div className="blog-post">
+            <p>ARTIFICIAL INTELLIGENCE</p>
+            <h2>AI: A Game-Changer for Small Bussiness Websites</h2>
+
+            <span className="time">
+              August 11,2024 <span className="line">|</span> by Frank Farris
+            </span>
+          </div>
         </div>
       </div>
-      <div className="divider" style={{ height: "1px", width: "100vw" }}></div>
-      <div className="blog">
-        <div>
-          <h3>WEB DESIGN</h3>
-          <h1>Future of Web Design: Emerging Technologies</h1>
-          <p>July 30,2024 | by Antje Knott</p>
+      <div className="blog-section">
+        <div className="width-container">
+          <div className="blog-post">
+            <p>BRAND DESIGN</p>
+            <h2>Typography: The Unsung Hero of Web Design</h2>
+            <span className="time">
+              August 5,2024 <span className="line">|</span> by Antje Knott
+            </span>
+          </div>
+        </div>
+      </div>
+      <div className="blog-section" style={{ borderBottom: "none" }}>
+        <div className="width-container">
+          <div className="blog-post">
+            <p>WEB DESIGN</p>
+            <h2>Future of Web Design: Emerging Technologies</h2>
+            <span className="time">
+              July 30,2024 <span className="line">|</span> by Antje Knott
+            </span>
+          </div>
         </div>
       </div>
     </div>

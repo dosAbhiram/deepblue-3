@@ -195,7 +195,7 @@ img {
   height: 24px;
 }
 .social-icons img:hover {
-  filter: invert(70%);
+  filter: invert(10%);
 }
 
 .logo img {
