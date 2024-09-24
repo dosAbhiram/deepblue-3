@@ -204,12 +204,12 @@ h3 {
 .image-wrapper-border {
   padding: 40px 0;
 }
-@media (max-width: 1025px) {
+@media (max-width: 1024px) {
   .client-row2 img {
     max-width: 242px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .client-row2 img {
     max-width: 192px;
   }
@@ -274,7 +274,6 @@ h3 {
   display: flex;
   align-items: center;
 }
-
 .award {
   padding: 0 15px;
   width: 100%;
@@ -322,19 +321,11 @@ h3 {
 }
 
 @media (max-width: 991px) {
-  .award img {
-    width: 87px;
-    height: 67px;
-  }
-  .goodFirms {
-    height: 67px;
-  }
-  .goodFirms img {
-    width: 50px;
-    height: 33px;
-  }
   .innerAward {
     padding-right: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   .innerAwardGood {
     padding-right: 0px;
@@ -360,12 +351,12 @@ h3 {
   }
   .innerAward {
     border: 1px solid black;
+    width: auto;
   }
-  .innerAward img {
-    padding-left: 45px;
-  }
+
   .innerAwardGood {
     border: 1px solid black;
+    width: auto;
   }
   .goodFirms {
     height: 225px;
