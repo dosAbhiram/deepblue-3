@@ -1,17 +1,120 @@
 import "../../assets/styles/footer.css";
+import { useState } from "react";
+import emailjs from "emailjs-com";
 
 function FormSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    projectDescription: "",
+  });
+
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (
+      !formData.name ||
+      !formData.email ||
+      !formData.company ||
+      !formData.phone ||
+      !formData.projectDescription
+    ) {
+      setErrorMessage("Please fill out all fields.");
+      return;
+    }
+    setErrorMessage("");
+
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_g5vxp18",
+        "template_a4zj6wh",
+        formData,
+        "3yukRhy_g6o2u07IH"
+      )
+      .then((response) => {
+        console.log("Email sent successfully!", response.status, response.text);
+        setFormSubmitted(true);
+        setLoading(false);
+
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          projectDescription: "",
+        });
+      })
+      .catch((error) => {
+        console.error("Failed to send the email:", error);
+        setErrorMessage("Failed to send your message. Please try again later.");
+        setLoading(false);
+      });
+  };
+
   return (
     <div className="form-container">
       <h1>We would love to hear about your project. Let&apos;s talk.</h1>
-      <form>
-        <input type="text" placeholder="First and last name*" />
-        <input type="email" placeholder="Email*" />
-        <input type="text" placeholder="Company name*" />
-        <input type="text" placeholder="Phone*" />
-        <input type="text" placeholder="Please describe your project*" />
-        <input type="submit" />
-      </form>
+      {formSubmitted && <p>Thank you! Your message has been submitted.</p>}
+      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+
+      {loading ? (
+        <p>Sending your message...</p>
+      ) : (
+        <form onSubmit={sendEmail}>
+          <input
+            type="text"
+            name="name"
+            placeholder="First and last name*"
+            value={formData.name}
+            onChange={handleInputChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email*"
+            value={formData.email}
+            onChange={handleInputChange}
+          />
+          <input
+            type="text"
+            name="company"
+            placeholder="Company name*"
+            value={formData.company}
+            onChange={handleInputChange}
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone*"
+            value={formData.phone}
+            onChange={handleInputChange}
+          />
+          <input
+            type="text"
+            name="projectDescription"
+            placeholder="Please describe your project*"
+            value={formData.projectDescription}
+            onChange={handleInputChange}
+          />
+          <input type="submit" value="Submit" />
+        </form>
+      )}
     </div>
   );
 }

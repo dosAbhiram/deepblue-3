@@ -136,27 +136,27 @@ img {
 }
 
 .footer-section h4 {
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 40px;
   color: #fff;
   font-weight: 300;
 }
 
 .footer-contact h5 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 14px;
+  margin: 10px 0px;
   color: #fff;
   font-weight: 700;
 }
 
 .footer-contact p {
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
   line-height: 2;
 }
 
 .footer-contact a {
-  font-size: 16px;
+  font-size: 14px;
   color: #ccc;
   line-height: 2;
 }
@@ -168,7 +168,7 @@ img {
 .info ul {
   list-style-type: none;
   padding: 0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
@@ -203,6 +203,12 @@ img {
   width: 180px;
   margin: 0 auto;
   display: block;
+}
+@media (max-width: 1024px) {
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 768px) {
