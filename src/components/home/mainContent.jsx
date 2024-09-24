@@ -382,7 +382,7 @@ function AwardSection() {
           </div>
 
           <div className="award">
-            <div className="innerAward" style={{ border: "none" }}>
+            <div className="innerAwardGood">
               <div className="goodFirms">
                 <img
                   src="	https://goodfirms.s3.amazonaws.com/badges/white-sticker/top-website-development-companies.svg"

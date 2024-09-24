@@ -272,47 +272,109 @@ h3 {
 }
 .awards-wrapper {
   display: flex;
+  align-items: center;
 }
 
 .award {
   padding: 0 15px;
   width: 100%;
 }
-
 .award p {
   color: #4f7097;
   text-align: center;
 }
 .innerAward {
   padding-right: 30px;
-  border-right: 1px solid #979797;
+}
+.innerAwardGood {
+  padding-right: 30px;
 }
 .goodFirms {
+  display: flex;
   height: 127px;
   padding: 20px;
 }
 .goodFirms img {
   background-color: grey;
-  width: 110;
-  height: 79.61px;
+  width: 110px;
+  height: 79px;
 }
 
 /* Responsive styles */
+@media (max-width: 1024px) {
+  .awards-wrapper {
+    justify-content: center;
+  }
+  .award img {
+    width: 98px;
+    height: 87px;
+  }
+  .award p {
+    font-size: 16px;
+  }
+  .goodFirms {
+    height: 100px;
+  }
+  .goodFirms img {
+    width: 67px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .award img {
+    width: 87px;
+    height: 67px;
+  }
+  .goodFirms {
+    height: 67px;
+  }
+  .goodFirms img {
+    width: 50px;
+    height: 33px;
+  }
+  .innerAward {
+    padding-right: 0px;
+  }
+  .innerAwardGood {
+    padding-right: 0px;
+  }
+}
+
 @media (max-width: 768px) {
   .awards-wrapper {
     flex-direction: column;
     align-items: center;
   }
   .award {
-    display: flex;
-    justify-content: center;
+    width: 316px;
+    height: 316px;
+  }
+  .award img {
+    height: auto;
+    width: auto;
+  }
+  .award p {
+    font-size: 18px;
+    padding-bottom: 20px;
   }
   .innerAward {
-    width: 198px;
-    height: 176px;
-    border: 1px solid grey;
-    margin-bottom: 20px;
-    padding: 0px;
+    border: 1px solid black;
+  }
+  .innerAward img {
+    padding-left: 45px;
+  }
+  .innerAwardGood {
+    border: 1px solid black;
+  }
+  .goodFirms {
+    height: 225px;
+    width: 200px;
+    padding-left: 55px;
+  }
+  .goodFirms img {
+    width: 180px;
+    height: 140px;
   }
 }
 
