@@ -1,9 +1,3 @@
-.width-container {
-  margin: 0px auto;
-  max-width: 100%;
-  padding: 0 20px;
-  width: 1200px;
-}
 .work-section-wrapper {
   padding: 76px 0px;
 }
@@ -13,7 +7,6 @@
 
 .work-content-wrapper {
   display: flex;
-  width: 100%;
 }
 
 .work-left-content {
@@ -47,19 +40,13 @@
 }
 
 .work-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
   position: relative;
-  max-width: 100vw;
-  overflow: hidden;
   border-bottom: 2px solid #275a8a;
 }
 
 .work-content {
   padding: 100px 102px 100px 0px;
   width: 40%;
-  z-index: 1;
 }
 
 .work-image-outer {
@@ -67,9 +54,7 @@
   top: 0;
   right: 0;
   height: 100%;
-  width: calc(100vw - 800px);
-  z-index: 0;
-  margin-left: -120px;
+  width: calc(100vw - 60vw);
 }
 
 .background-img {

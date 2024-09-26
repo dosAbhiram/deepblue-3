@@ -19,7 +19,6 @@ abbr {
 
 .wc-inner {
   padding: 0 15px;
-  width: 100%;
 }
 .wc-wrapper {
   margin-bottom: 15px;
@@ -72,9 +71,7 @@ abbr {
   justify-content: center;
   align-items: flex-start;
 }
-.works {
-  padding: 0px 0px 30px;
-}
+
 .works p {
   font-size: 16px;
   color: #275a8a;
