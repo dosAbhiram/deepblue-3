@@ -55,6 +55,41 @@ const portfolio = [
     src: "images/Portfolio/tn_aqua.jpg",
     filter: ["All", "Entertainment", "Tourism"],
   },
+  {
+    Name: "A3 by Airbus",
+    src: "images/Portfolio/A3.webp",
+    filter: ["All", "Technology", "Corporate"],
+  },
+  {
+    Name: "The Kings Center",
+    src: "images/Portfolio/king-center.jpg.webp",
+    filter: ["All", "NonProfit"],
+  },
+  {
+    Name: "Fernbank Museum of Natural History",
+    src: "images/Portfolio/fernbank.webp",
+    filter: ["All", "Education", "Entertainment", "Tourism", "ConsumerBrand"],
+  },
+  {
+    Name: "GolfHQ",
+    src: "images/Portfolio/golfhq.jpg",
+    filter: ["All", "eCommerce"],
+  },
+  {
+    Name: "Poseidon Undersea Resorts",
+    src: "images/Portfolio/Poseidon.webp",
+    filter: ["All", "Tourism"],
+  },
+  {
+    Name: "Roberts Boche",
+    src: "images/Portfolio/RBA.webp",
+    filter: ["All", "Corporate"],
+  },
+  {
+    Name: "Phillipines Department of Tourism",
+    src: "images/Portfolio/pdot.jpg",
+    filter: ["All", "Entertainment", "Tourism", "Government"],
+  },
 ];
 
 export default portfolio;

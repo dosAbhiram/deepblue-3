@@ -296,6 +296,12 @@ h3 {
   width: 110px;
   height: 79px;
 }
+@media (max-width: 1199) {
+  .award p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
 
 /* Responsive styles */
 @media (max-width: 1024px) {

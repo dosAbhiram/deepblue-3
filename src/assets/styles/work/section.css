@@ -1,236 +1,151 @@
-.section {
-  background-color: #ffffff;
-  color: #252525;
-  padding: 20px;
-  font-family: "Raleway", sans-serif;
-  height: 380px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+.width-container {
+  margin: 0px auto;
+  max-width: 100%;
+  padding: 0 20px;
+  width: 1200px;
+}
+.work-section-wrapper {
+  padding: 76px 0px;
+}
+.work-background {
+  background-color: #eef1f6;
 }
 
-.content-wrapper {
+.work-content-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.work-left-content {
+  width: 33.333%;
+}
+
+.work-content-wrapper h2 {
+  color: #393939;
+  font-weight: 500;
+}
+
+.work-right-content {
+  width: 66.666%;
+  padding-top: 12px;
+}
+.work-right-inner {
+  padding: 0 15px;
+}
+.work-content-wrapper p {
+  color: #393939;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.work-content-wrapper a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.work-content-wrapper a:hover {
+  color: #337ab7;
+}
+
+.work-grid {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  align-items: stretch;
+  position: relative;
+  max-width: 100vw;
+  overflow: hidden;
+  border-bottom: 2px solid #275a8a;
+}
+
+.work-content {
+  padding: 100px 102px 100px 0px;
+  width: 40%;
+  z-index: 1;
+}
+
+.work-image-outer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: calc(100vw - 800px);
+  z-index: 0;
+  margin-left: -120px;
+}
+
+.background-img {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
 }
 
-.left-content,
-.right-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-}
-
-.left-content {
-  max-width: 35%;
-}
-
-.right-content {
-  text-align: left;
-  max-width: 55%;
-}
-
-.section h2 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  font-family: "Raleway", serif;
-  font-weight: 500;
-  margin-bottom: 5px;
-  color: #000;
-}
-
-.section h3 {
-  font-family: "Raleway", sans-serif;
-  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
-  font-weight: 500;
-  margin-bottom: 5px;
-  color: #357abe;
-}
-
-.section p {
-  font-weight: 500;
-  font-family: "Raleway", sans-serif;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  line-height: 1.5;
-  color: #333;
-  margin: 5px 0;
-}
-
-.section p b {
-  font-weight: 700;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
-  color: #252525;
-}
-.work-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-}
-.work-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 64.9vh;
-  border-bottom: #357abe 1px solid;
-}
-.work-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  width: 40vw;
-  padding-left: 3vw;
-}
 .work-content h2 {
-  font-size: 2.5vw;
-  font-family: "Raleway", sans-serif;
-  color: #357abe;
-  font-weight: 600;
+  font-size: 26px;
+  line-height: 37px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #275a8a;
 }
+
 .work-content p {
-  width: 30vw;
-  font-size: 1.5vw;
-  font-family: "Raleway", sans-serif;
-  color: #252525df;
-  font-weight: 450;
-  text-align: left;
-  line-height: 1.2;
-  margin: 2vw 0;
+  font-weight: 400;
+  color: #393939;
+  margin-bottom: 15px;
 }
 .work-content a {
-  font-size: 1.5vw;
-  font-family: "Raleway", sans-serif;
-  color: #252525;
   font-weight: 500;
-  text-align: left;
+  color: #275a8a;
+  font-size: 16px;
   text-decoration: none;
+  margin-bottom: 15px;
 }
 .work-content a:hover {
-  color: #357abe;
-}
-.work-grid img {
-  width: 60vw;
-}
-.content-divider {
-  height: 1.3px;
-  width: 100vw;
-  background-color: #357abe;
-}
-@media (max-width: 768px) {
-  .content-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-content,
-  .right-content {
-    max-width: 100%;
-    padding: 5px 0;
-    text-align: center;
-  }
-
-  .right-content {
-    text-align: center;
-  }
-
-  .section {
-    height: auto;
-  }
-
-  .section h2 {
-    font-size: 1.8rem;
-  }
-
-  .section h3 {
-    font-size: 1.8rem;
-  }
-
-  .section p {
-    font-size: 0.8rem;
-  }
-  .work-grid {
-    flex-direction: column-reverse;
-    height: auto;
-  }
-  .work-content {
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-  }
-  .work-content h2 {
-    font-size: 6vw;
-  }
-  .work-content p {
-    width: 80vw;
-    font-size: 3.5vw;
-  }
-  .work-content a {
-    font-size: 3.5vw;
-  }
-  .work-grid img {
-    width: 100vw;
-  }
+  text-decoration: underline;
 }
 
-@media (max-width: 432px) {
-  .section {
-    padding: 10px;
-    height: auto;
-  }
+.corporate {
+  background-image: url("/images/work-section/corporate.jpg");
+}
+.healthcare {
+  background-image: url("/images/work-section/health.jpg");
+}
+.government {
+  background-image: url("/images/work-section/government.jpg");
+}
+.education {
+  background-image: url("/images/work-section/education.jpg");
+}
+.technology {
+  background-image: url("/images/work-section/technology.jpg");
+}
+.nonprofit {
+  background-image: url("/images/work-section/nonprofit.jpg");
+}
+.ecommerce {
+  background-image: url("/images/work-section/ecommerce.jpg");
+}
+.brandIdentity {
+  background-image: url("/images/work-section/brandIdentity.jpg");
+}
+.searchEngine {
+  background-image: url("/images/work-section/searchEngine.jpg");
+}
 
-  .left-content,
-  .right-content {
-    max-width: 100%;
-    padding: 10px;
-  }
+.work-parallax-section {
+  background-image: url("/images/work-section/responsive-web-design-2-scaled.jpg");
+  background-position: 50% 0;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background-repeat: no-repeat;
+  height: 800px;
+}
 
-  .section h2 {
-    font-size: 1.3rem;
-  }
-
-  .section h3 {
-    font-size: 1.4rem;
-  }
-
-  .section p {
-    font-size: 0.7rem;
-  }
-
-  .section p b {
-    font-size: 1rem;
-  }
-  .work-grid {
-    flex-direction: column-reverse;
-    height: auto;
-  }
-  .work-content {
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    height: 30vh;
-  }
-
-  .work-content h2 {
-    font-size: 6vw;
-  }
-  .work-content p {
-    width: 80vw;
-    font-size: 3.5vw;
-  }
-  .work-ontent a {
-    font-size: 3.5vw;
-  }
-  .work-grid img {
-    width: 100vw;
-  }
+.wps-inner {
+  font-size: 50px;
+  line-height: 69px;
+  font-weight: 400;
 }

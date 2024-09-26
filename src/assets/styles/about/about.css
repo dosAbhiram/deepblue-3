@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+.about-banner {
+  /* margin-top: 80px; */
+  background-image: url("/images/about-section/web-design-atlanta-scaled.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 635px;
+  position: relative;
+}
+
+.empty-space {
+  height: 475px;
+}
+
+.ab-inner {
+  padding: 0 15px;
+  width: 100%;
+}
+.ab-wrapper {
+  margin-bottom: 15px;
+}
+.about-banner h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.about-banner p {
+  color: rgb(255, 255, 255);
+}
+.empty-space-bottom {
+  height: 2px;
+  width: 60px;
+  margin-bottom: 60px;
+  border: 2px solid #548cc1;
+}

@@ -1,42 +1,61 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Category from "../components/work/category";
 import HeroSection from "../components/work/heroSection";
 import Section from "../components/work/mainContent";
 import "../assets/styles/work/work.css";
+import portfolio from "../data/portfolio";
+
+const calculateCategoryCount = (portfolio) => {
+  const categoryCount = {};
+
+  portfolio.forEach((item) => {
+    item.filter.forEach((category) => {
+      if (categoryCount[category]) {
+        categoryCount[category] += 1;
+      } else {
+        categoryCount[category] = 1;
+      }
+    });
+  });
+
+  return categoryCount;
+};
 
 function Work() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [categoryCount, setCategoryCount] = useState({});
+
+  useEffect(() => {
+    const counts = calculateCategoryCount(portfolio);
+    setCategoryCount(counts);
+  }, []);
+
   const handleClick = (category) => {
     setSelectedCategory(category);
   };
+
   return (
     <div>
       <HeroSection />
       <Section />
-
-      <div className="works">
-        <h3>
-          <em>Featured Work /</em>
-        </h3>
-        <div className="category">
-          <button onClick={() => handleClick("All")}>All</button>
-          <button onClick={() => handleClick("Technology")}>Technology</button>
-          <button onClick={() => handleClick("Government")}>Government</button>
-          <button onClick={() => handleClick("Education")}>Education</button>
-          <button onClick={() => handleClick("ConsumerBrand")}>
-            Consumer Brand
-          </button>
-          <button onClick={() => handleClick("Entertainment")}>
-            Entertainment
-          </button>
-          <button onClick={() => handleClick("Tourism")}>Tourism</button>
-          <button onClick={() => handleClick("NonProfit")}>Non-Profit</button>
-          <button onClick={() => handleClick("Healthcare")}>Healthcare</button>
-          <button onClick={() => handleClick("Corporate")}>Corporate</button>
-          <button onClick={() => handleClick("eCommerce")}>eCommerce</button>
+      <div className="width-container">
+        <div className="works">
+          <p>
+            <em>Featured Work /</em>
+          </p>
+          <div className="category">
+            {Object.keys(categoryCount).map((category) => (
+              <button key={category} onClick={() => handleClick(category)}>
+                {category}{" "}
+                {categoryCount[category] > 0 && (
+                  <span className="badge">{categoryCount[category]}</span>
+                )}
+              </button>
+            ))}
+          </div>
+          <Category selectedCategory={selectedCategory} />
+          <div style={{ backgroundColor: "#3f4247", width: "100vw" }}></div>
         </div>
-        <Category selectedCategory={selectedCategory} />
-        <div style={{ backgroundColor: "#3f4247", width: "100vw" }}></div>
       </div>
     </div>
   );
