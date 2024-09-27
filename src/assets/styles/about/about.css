@@ -90,3 +90,303 @@
   font-weight: 400;
   color: #393939;
 }
+
+/* BackGround Image*/
+.about-background-1 {
+  display: flex;
+}
+
+.about-background-container1 {
+  background-image: url("/images/about-section/background1/atlanta-web-design-agency-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 50vw;
+}
+
+.about-background-container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-image1 {
+  background-image: url("/images/about-section/background1/atlanta-2048x1024.jpg");
+  height: 50vh;
+  width: 50vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.about-image2 {
+  background-image: url("/images/about-section/background1/san-francisco-web-developer-2048x1026.jpg");
+  height: 50vh;
+  width: 50vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Section 3*/
+.about-section3 {
+  padding: 80px 0px;
+  background-color: #eef1f6;
+}
+.about-section3-container {
+  display: flex;
+}
+.about-section3-left {
+  width: 33.333%;
+}
+.about-section3-inner {
+  padding: 0 15px;
+}
+.about-section3-right {
+  width: 67.667%;
+}
+.about-section3-left h2 {
+  color: #393939;
+  font-weight: 400;
+}
+.about-section3-right p {
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 400;
+  color: #393939;
+  margin-bottom: 12px;
+}
+.about-section3-right span {
+  color: #27598c;
+}
+.about-section3-right a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.about-section3-right a:hover {
+  color: #337ab7;
+}
+
+/* Section 4*/
+.about-section4 {
+  background-color: #27598c;
+}
+.aboutsection4-grid {
+  position: relative;
+}
+.as4-content {
+  padding: 100px 60px 100px 0px;
+  width: 50%;
+}
+.as4-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+.as4-wrapper-left {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+.as4-content-left {
+  padding: 100px 0px 100px 60px;
+  width: 50%;
+}
+.about-section4 h2 {
+  font-size: 26px;
+  line-height: 37px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+.about-section4 p {
+  margin-bottom: 15px;
+  color: white;
+  font-weight: 400;
+}
+.as4-content-divider {
+  border-bottom: 3px solid #548cc1;
+  display: block;
+  width: 50px;
+}
+
+.as4-image-left {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.as4-image-right {
+  right: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.as4-image-1 {
+  background-image: url("/images/about-section/section4/web-design-agency.png");
+}
+.as4-image-2 {
+  background-image: url("/images/about-section/section4/ai-web-design-agency-1.png");
+}
+.as4-image-3 {
+  background-image: url("/images/about-section/section4/web-design-atlanta.png");
+}
+.as4-image-4 {
+  background-image: url("/images/about-section/section4/web-design-san-francisco.png");
+}
+
+/*MEET THE TEAM SECTION*/
+.about-team {
+  background-color: #eef1f6;
+  padding: 80px 0px;
+}
+.at-container {
+  margin-bottom: 40px;
+  display: flex;
+}
+.at-inner-left {
+  width: 33.333%;
+  padding: 0 15px;
+}
+.at-inner-right {
+  width: 66.667%;
+  padding: 0 15px;
+}
+.at-container h2 {
+  color: #393939;
+  font-weight: 400;
+}
+.at-container span {
+  color: #27598c;
+}
+.at-container p {
+  color: #393939;
+  font-size: 20px;
+  line-height: 31px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.at-container a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.at-container a:hover {
+  color: #337ab7;
+  text-decoration: underline;
+}
+
+.team-images-row-1,
+.team-images-row-2 {
+  display: flex;
+  justify-content: center;
+}
+
+.team-images-inner-1 {
+  padding: 0px 15px;
+  position: relative;
+}
+
+.team-images-inner-2 {
+  padding: 35px 15px;
+  position: relative;
+}
+
+.team-images img {
+  width: 270px;
+  height: 337.5px;
+  display: block;
+}
+
+.overlay-container {
+  position: relative;
+  width: 270px;
+  height: 337.5px;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.overlay-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 35px;
+}
+.overlay-text h3 {
+  color: #eef1f6;
+  font-size: 20px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+.overlay-text p {
+  color: #eef1f6;
+  font-size: 20px;
+  font-weight: 400;
+}
+.overlay-container:hover .overlay {
+  opacity: 1;
+}
+
+/*Hiring Sections*/
+.hiring {
+  background-color: #27598c;
+  padding: 150px 0px;
+}
+.hiring-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+}
+.hiring-inner h2 {
+  margin-bottom: 40px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.hiring-button {
+  margin-bottom: 22px;
+}
+.hiring-button a {
+  background-color: #eef1f6;
+  color: #275a8a;
+  padding: 9px 40px;
+  font-size: 20px;
+}
+.hiring-button:hover a {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.about-award {
+  padding: 0 15px;
+  width: 100%;
+  border-right: 1px rgba(128, 128, 128, 0.7) solid;
+  margin-left: 10px;
+}
+
+.about-award p {
+  color: #4f7097;
+  text-align: center;
+}
