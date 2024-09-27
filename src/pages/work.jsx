@@ -54,7 +54,6 @@ function Work() {
             ))}
           </div>
           <Category selectedCategory={selectedCategory} />
-          <div style={{ backgroundColor: "#3f4247", width: "100vw" }}></div>
         </div>
       </div>
     </div>

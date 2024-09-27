@@ -51,15 +51,10 @@ abbr {
   padding-left: 30px;
   background-clip: padding-box;
 }
-.my-masonry-grid_column > .portfolioImage {
-  width: 100%;
-  max-width: 100%;
-}
 
 .portfolioImage {
   position: relative;
   overflow: hidden;
-  width: 100%;
   margin-bottom: 30px;
   transition: transform 0.3s ease;
 }
