@@ -1,0 +1,140 @@
+.caseStudy-banner {
+  background: url("/images/CaseStudies/web-design-case-studies-scaled.jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+  height: 635px;
+  position: relative;
+}
+.caseStudy-empty-space {
+  height: 475px;
+}
+.cs-inner {
+  padding: 0 15px;
+  width: 100%;
+}
+.cs-wrapper {
+  margin-bottom: 15px;
+}
+.caseStudy-banner h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.caseStudy-banner p {
+  color: rgb(255, 255, 255);
+}
+.cs-empty-space-bottom {
+  height: 2px;
+  width: 60px;
+  margin-bottom: 60px;
+  border: 2px solid #548cc1;
+}
+
+.cs-section-wrapper {
+  padding: 76px 0px;
+}
+.caseStudy-background {
+  background-color: #eef1f6;
+}
+
+.cs-content-wrapper {
+  display: flex;
+}
+
+.cs-left-content {
+  width: 33.333%;
+}
+.cs-left-inner {
+  padding: 0 15px;
+}
+
+.cs-content-wrapper h2 {
+  color: #393939;
+  font-weight: 500;
+}
+
+.cs-right-content {
+  width: 66.667%;
+  padding-top: 12px;
+}
+.cs-right-inner {
+  padding: 0 15px;
+}
+.cs-content-wrapper p {
+  color: #393939;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.cs-content-wrapper a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.cs-content-wrapper a:hover {
+  color: #337ab7;
+}
+/* Section 3*/
+.caseStudy-grid {
+  position: relative;
+  border-bottom: 2px solid #275a8a;
+}
+.csg-content {
+  padding: 100px 100px 100px 0px;
+  width: 43%;
+}
+.csg-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.csg-wrapper h2 {
+  font-size: 26px;
+  line-height: 37px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #275a8a;
+}
+.csg-wrapper p {
+  margin-bottom: 15px;
+  color: #393939;
+  font-weight: 400;
+}
+.csg-wrapper a {
+  color: #3a6995;
+  font-size: 16px;
+  font-style: italic;
+  text-decoration: none;
+}
+.csg-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.csg-image {
+  right: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 57%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.csg-image-1 {
+  background-image: url("/images/CaseStudies/section3/intel-case.png");
+}
+.csg-image-2 {
+  background-image: url("/images/CaseStudies/section3/object-rocket.png");
+}
+.csg-image-3 {
+  background-image: url("/images/CaseStudies/section3/wild-energy.jpg");
+}
+.csg-image-4 {
+  background-image: url("/images/CaseStudies/section3/rba-case-study.jpg");
+}
+.csg-image-5 {
+  background-image: url("/images/CaseStudies/section3/nahc-case-study.png");
+}

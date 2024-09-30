@@ -154,11 +154,7 @@ function Navbar() {
               <Link to="/work" className="links" onClick={handleLinkClick}>
                 Work
               </Link>
-              <Link
-                to="/case-studies"
-                className="links"
-                onClick={handleLinkClick}
-              >
+              <Link to="/caseStudy" className="links" onClick={handleLinkClick}>
                 Case Studies
               </Link>
               <Link
