@@ -268,7 +268,7 @@ function Section() {
             <div className="background-img brandIdentity"></div>
           </div>
         </div>
-        <div className="work-grid">
+        <div className="work-grid no-border">
           <div className="width-container">
             <div className="wsec-wrapper">
               <motion.div

@@ -167,6 +167,9 @@ abbr {
   opacity: 1;
 }
 
+.no-border {
+  border: none;
+}
 @media screen and (max-width: 768px) {
   .container {
     height: 50vh;
