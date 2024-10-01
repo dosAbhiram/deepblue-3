@@ -1,0 +1,29 @@
+.hiring {
+  background-color: #27598c;
+  padding: 150px 0px;
+}
+.hiring-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+}
+.hiring-inner h2 {
+  margin-bottom: 40px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.hiring-button {
+  margin-bottom: 22px;
+}
+.hiring-button a {
+  background-color: #eef1f6;
+  color: #275a8a;
+  padding: 9px 40px;
+  font-size: 20px;
+}
+.hiring-button:hover a {
+  background-color: #000;
+  color: #ffffff;
+}

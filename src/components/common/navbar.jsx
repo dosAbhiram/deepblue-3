@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { interpolate } from "flubber";
-import "../../assets/styles/navbar.css";
+import "../../assets/styles/common/navbar.css";
 
 function Navbar() {
   const openTop = "M50,150 L450,150";

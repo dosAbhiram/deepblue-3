@@ -1,4 +1,4 @@
-import "../../assets/styles/footer.css";
+import "../../assets/styles/common/footer.css";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 

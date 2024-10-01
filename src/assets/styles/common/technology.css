@@ -1,0 +1,31 @@
+.techologies-container {
+  padding: 38px 0 79px;
+}
+.technology-heading {
+  margin: 0 0 38px;
+  padding: 0 15px;
+}
+.technology-heading p {
+  font-size: 16px;
+  color: #275a8a;
+  line-height: 26px;
+  padding: 0 0 12px;
+}
+.technology-wrapper {
+  display: flex;
+  align-items: center;
+}
+.technologies {
+  padding: 0 15px;
+}
+.technologies p {
+  color: #4f7097;
+  text-align: center;
+}
+.innerTech {
+  padding-right: 30px;
+  border-right: 1px solid #979797;
+}
+.innerTechlast {
+  padding-right: 30px;
+}
