@@ -91,9 +91,17 @@ function Navbar() {
     };
   }, [lastScrollY, dropdownOpen]);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (event, targetId) => {
     setDropdownOpen(false); // Close the dropdown when a link is clicked
     document.body.classList.remove("no-scroll"); // Ensure body scroll is enabled
+
+    // If targetId is provided, scroll to the specific section
+    if (targetId) {
+      const element = document.getElementById(targetId);
+      if (element) {
+        element.scrollIntoView({ behavior: "auto" });
+      }
+    }
   };
 
   return (
@@ -103,7 +111,7 @@ function Navbar() {
       }`}
     >
       <div className="logo">
-        <Link to="//" onClick={handleLinkClick}>
+        <Link to="/" onClick={handleLinkClick}>
           <img src="icons/logo.webp" alt="Logo" />
         </Link>
       </div>
@@ -167,7 +175,11 @@ function Navbar() {
               <Link to="/blog" className="links" onClick={handleLinkClick}>
                 Blog
               </Link>
-              <Link to="/contact" className="links" onClick={handleLinkClick}>
+              <Link
+                to="#"
+                className="links"
+                onClick={(e) => handleLinkClick(e, "footer")}
+              >
                 Contact
               </Link>
               <Link

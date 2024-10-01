@@ -1,4 +1,4 @@
-function CaseStudyBackground() {
+function CaseStudySection() {
   return (
     <div className="caseStudy-background">
       <div className="width-container">
@@ -45,4 +45,4 @@ function CaseStudyBackground() {
     </div>
   );
 }
-export default CaseStudyBackground;
+export default CaseStudySection;

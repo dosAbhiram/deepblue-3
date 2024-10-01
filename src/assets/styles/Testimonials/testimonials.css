@@ -1,0 +1,170 @@
+.testimonials-banner {
+  background-image: url("/images/testimonials/web-design-agency-scaled.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: scroll;
+  height: 635px;
+  position: relative;
+}
+
+.testimaonials-empty-space {
+  height: 475px;
+}
+
+.tst-inner {
+  padding: 0 15px;
+  width: 100%;
+}
+.tst-wrapper {
+  margin-bottom: 15px;
+}
+.testimonials-banner h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 18px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.testimonials-banner p {
+  color: rgb(255, 255, 255);
+}
+.tst-empty-space-bottom {
+  height: 2px;
+  width: 60px;
+  margin-bottom: 60px;
+  border: 2px solid #548cc1;
+}
+
+/* Section 1 */
+.tst-section-wrapper {
+  padding: 76px 0px;
+}
+.testimonials-background {
+  background-color: #eef1f6;
+}
+
+.tst-content-wrapper {
+  display: flex;
+}
+
+.tst-left-content {
+  width: 33.333%;
+}
+.tst-left-inner {
+  padding: 0 15px;
+}
+
+.tst-content-wrapper h2 {
+  color: #393939;
+  font-weight: 500;
+}
+
+.tst-right-content {
+  width: 66.667%;
+  padding-top: 12px;
+}
+.tst-right-inner {
+  padding: 0 15px;
+}
+.tst-content-wrapper p {
+  color: #393939;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.tst-content-wrapper a {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.tst-content-wrapper a:hover {
+  color: #337ab7;
+}
+
+/*Grid Section*/
+.testimonials-grid {
+  position: relative;
+  border-bottom: 2px solid #275a8a;
+}
+.tst-content {
+  padding: 100px 100px 100px 0px;
+  width: 43%;
+}
+.tst-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tst-wrapper h2 {
+  font-size: 26px;
+  line-height: 37px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #275a8a;
+}
+.tst-wrapper p {
+  margin-bottom: 15px;
+  color: #393939;
+  font-weight: 400;
+}
+.tst-wrapper a {
+  color: #3a6995;
+  font-size: 16px;
+  font-style: italic;
+  text-decoration: none;
+}
+.tst-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.tst-image {
+  right: 0;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 57%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.tst-image-1 {
+  background-image: url("/images/testimonials/grid-images/carter-center-web-logo.png");
+}
+.tst-image-2 {
+  background-image: url("/images/testimonials/grid-images/nasa-1-scaled.jpg");
+}
+.tst-image-3 {
+  background-image: url("/images/testimonials/grid-images/poseidon-testimonial-new.png");
+}
+.tst-image-4 {
+  background-image: url("/images/testimonials/grid-images/barking-mad.png");
+}
+.tst-image-5 {
+  background-image: url("/images/testimonials/grid-images/us-courts.jpg");
+}
+.tst-image-6 {
+  background-image: url("/images/testimonials/grid-images/miramax.jpg");
+}
+.tst-image-7 {
+  background-image: url("/images/testimonials/grid-images/intel.png");
+}
+.tst-image-8 {
+  background-image: url("/images/testimonials/grid-images/client_banner_TogetherGreen_01-1.jpg");
+}
+.tst-image-9 {
+  background-image: url("/images/testimonials/grid-images/sweetwater.jpg");
+}
+.tst-image-10 {
+  background-image: url("/images/testimonials/grid-images/disa-testimonial.png");
+}
+.tst-image-11 {
+  background-image: url("/images/testimonials/grid-images/yellowstone-park-website.jpg");
+}
+.tst-image-12 {
+  background-image: url("/images/testimonials/grid-images/corautus.jpg");
+}
+
+.no-border {
+  border: none;
+}

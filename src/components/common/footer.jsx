@@ -42,10 +42,10 @@ function FormSection() {
 
     emailjs
       .send(
-        "service_g5vxp18",
-        "template_a4zj6wh",
+        "service_g5vxp18", // Your emailjs service ID
+        "template_a4zj6wh", // Your emailjs template ID
         formData,
-        "3yukRhy_g6o2u07IH"
+        "3yukRhy_g6o2u07IH" // Your emailjs user ID
       )
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
@@ -127,14 +127,14 @@ function Map() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="images/maps/MAP1.jpg.webp" />
+        <img src="images/maps/MAP1.jpg.webp" alt="Map 1" />
       </a>
       <a
         href="https://www.google.com/maps?cid=5733914885028411947"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src="images/maps/map2.jpg.webp" />
+        <img src="images/maps/map2.jpg.webp" alt="Map 2" />
       </a>
     </div>
   );
@@ -243,13 +243,15 @@ function FooterSection() {
     </footer>
   );
 }
+
 function Footer() {
   return (
-    <>
+    <footer id="footer">
       <FormSection />
       <Map />
       <FooterSection />
-    </>
+    </footer>
   );
 }
+
 export default Footer;

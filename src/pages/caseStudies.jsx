@@ -1,6 +1,6 @@
 import "../assets/styles/caseStudy/caseStudy.css";
 import CaseStudyBanner from "../components/CaseStudy/CaseStudy-banner";
-import CaseStudyBackground from "../components/CaseStudy/caseStudy-background";
+import CaseStudySection from "../components/CaseStudy/caseStudy-section";
 import CaseStudyGrid from "../components/CaseStudy/caseStudy-grid";
 import Hiring from "../components/common/hiring-section";
 import BlogSection from "../components/common/blog-section";
@@ -11,7 +11,7 @@ function CaseStudy() {
     <>
       <div>
         <CaseStudyBanner />
-        <CaseStudyBackground />
+        <CaseStudySection />
         <CaseStudyGrid />
         <BlogSection />
         <Hiring />

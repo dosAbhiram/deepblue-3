@@ -4,6 +4,7 @@ import Work from "./pages/work";
 import About from "./pages/about";
 import Services from "./pages/services";
 import CaseStudy from "./pages/caseStudies";
+import Testimonials from "./pages/testimonials";
 import IntelCaseStudy from "./pages/innerCaseStudy/intelPage";
 import Navbar from "./components/common/navbar";
 import Footer from "./components/common/footer";
@@ -20,9 +21,10 @@ function App() {
         <Route path="/work" element={<Work />} />
         <Route path="/services" element={<Services />} />
         <Route path="/caseStudy" element={<CaseStudy />} />
+        <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/work/intel" element={<IntelCaseStudy />} />
       </Routes>
-      <Footer />
+      <Footer id="footer" />
     </Router>
   );
 }

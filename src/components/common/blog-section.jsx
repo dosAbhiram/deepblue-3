@@ -37,7 +37,7 @@ function BlogSection() {
           </div>
         </div>
       </div>
-      <div className="blog-section" style={{ borderBottom: "none" }}>
+      <div className="blog-section">
         <div className="width-container">
           <div className="blog-post">
             <p>WEB DESIGN</p>
