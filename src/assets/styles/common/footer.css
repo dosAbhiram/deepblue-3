@@ -37,9 +37,7 @@ form {
   box-sizing: border-box;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="submit"] {
+.footer-input {
   padding: 15px;
   margin: 15px 0;
   border: none;

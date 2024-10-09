@@ -5,10 +5,12 @@ import About from "./pages/about";
 import Services from "./pages/services";
 import CaseStudy from "./pages/caseStudies";
 import Testimonials from "./pages/testimonials";
+import Blogs from "./pages/blog";
 import IntelCaseStudy from "./pages/innerCaseStudy/intelPage";
 import Navbar from "./components/common/navbar";
 import Footer from "./components/common/footer";
 import ScrollToTop from "./components/common/scrollToTop";
+import BlogArchive from "./components/blogs/blog-archive";
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/caseStudy" element={<CaseStudy />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/blog" element={<Blogs />} />
         <Route path="/work/intel" element={<IntelCaseStudy />} />
+        <Route path="/:year/:month" element={<BlogArchive />} />
       </Routes>
       <Footer id="footer" />
     </Router>

@@ -78,6 +78,7 @@ function FormSection() {
       ) : (
         <form onSubmit={sendEmail}>
           <input
+            className="footer-input"
             type="text"
             name="name"
             placeholder="First and last name*"
@@ -85,6 +86,7 @@ function FormSection() {
             onChange={handleInputChange}
           />
           <input
+            className="footer-input"
             type="email"
             name="email"
             placeholder="Email*"
@@ -92,6 +94,7 @@ function FormSection() {
             onChange={handleInputChange}
           />
           <input
+            className="footer-input"
             type="text"
             name="company"
             placeholder="Company name*"
@@ -99,6 +102,7 @@ function FormSection() {
             onChange={handleInputChange}
           />
           <input
+            className="footer-input"
             type="text"
             name="phone"
             placeholder="Phone*"
@@ -106,13 +110,14 @@ function FormSection() {
             onChange={handleInputChange}
           />
           <input
+            className="footer-input"
             type="text"
             name="projectDescription"
             placeholder="Please describe your project*"
             value={formData.projectDescription}
             onChange={handleInputChange}
           />
-          <input type="submit" value="Submit" />
+          <input className="footer-input" type="submit" value="Submit" />
         </form>
       )}
     </div>
