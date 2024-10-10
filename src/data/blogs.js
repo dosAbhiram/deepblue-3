@@ -1,9 +1,139 @@
+import { summary } from "framer-motion/client";
+
 const blog = [
+  {
+    category: "Strategy",
+    title: "Why Website Maintenance is Crucial",
+    date: "March 1, 2024",
+    author: "Antje Knott",
+  },
+  {
+    category: "Strategy",
+    title: "Microinteractions: Making the Small Things Matter",
+    date: "February 14, 2024",
+    author: "Antje Knott",
+  },
+  {
+    category: "Strategy",
+    title: "Good Web Design: 5 Ways It Pays Off",
+    date: "February 7, 2024",
+    author: "Antje Knott",
+  },
+  {
+    category: "Strategy",
+    title: "5 Must-Haves for Small Business Web Design",
+    date: "February 5, 2024",
+    author: "Antje Knott",
+  },
+  {
+    category: "Strategy",
+    title: "5 Web Design Trends You Can’t Afford to Miss",
+    date: "January 31, 2024",
+    author: "Antje Knott",
+  },
+  {
+    category: "Strategy",
+    title: "Web Design Myths: Debunked",
+    date: "January 30, 2024",
+    author: "Antje Knott",
+  },
+  {
+    category: "Strategy",
+    title: "Google Algorithms And SEO",
+    date: "January 22, 2024",
+    author: "Antje Knott",
+  },
+  {
+    category: "Strategy",
+    title: "How To Remove Malware From Your Website",
+    date: "January 18, 2024",
+    author: "Frank Farris",
+  },
+  {
+    category: "Web Development",
+    title: "How To Create An eCommerce Website Strategy",
+    date: "March 1, 2023",
+    author: "ChatGPT",
+  },
+  {
+    category: "Responsive Web Design",
+    title: "Web Design Trends For 2023",
+    date: "January 18, 2023",
+    author: "Antje Knott",
+  },
+  {
+    category: "WordPress",
+    title: "Top 10 Web Design Tools For Your Website",
+    date: "August 18, 2022",
+    author: "Antje Knott",
+  },
+  {
+    category: "WordPress",
+    title: "What is AMP & Why Should You Care?",
+    date: "November 2, 2021",
+    author: "Frank Farris",
+  },
+  {
+    category: "WordPress",
+    title: "9 Best WordPress Plugins To Improve Search",
+    date: "March 9, 2021",
+    author: "Frank Farris",
+  },
+  {
+    category: "ADA Compliance",
+    title: "ADA Audit for Website Accessibility",
+    date: "December 2, 2020",
+    author: "Frank Farris",
+  },
+  {
+    category: "Non-Profit",
+    title: "10 Best WordPress Plugins For Nonprofits",
+    date: "August 23, 2020",
+    author: "Frank Farris",
+  },
+  {
+    category: "Responsive Web Design",
+    title: "Responsive Web Design Turns 10",
+    date: "August 13, 2020",
+    author: "Frank Farris",
+  },
+  {
+    category: "Web Development",
+    title: "Custom Website Design, A Home Buyer’s Guide",
+    date: "July 30, 2020",
+    author: "Frank Farris",
+  },
+  {
+    category: "eCommerce",
+    title: "How Much Does A Magento Website Cost?",
+    date: "July 28, 2020",
+    author: "Frank Farris",
+  },
+  {
+    category: "Strategy",
+    title: "Local SEO: What Is It & Why Should You Care?",
+    date: "July 18, 2020",
+    author: "Frank Farris",
+  },
+  {
+    category: "Strategy",
+    title: "How To Get On The First Page Of Google",
+    date: "July 15, 2020",
+    author: "Frank Farris",
+  },
+  {
+    category: "Uncategorized",
+    title: "Top 10 Web Design Mistakes",
+    date: "January 8, 2023",
+    author: "Frank Farris",
+  },
   {
     category: "Artificial Intelligence",
     title: "AI: A Game-Changer for Small Business Websites",
     date: "August 11, 2024",
     author: "Frank Farris",
+    summary:
+      "Small businesses often face the challenge of balancing limited resources with the need for a high-quality, effective online presence. Thankfully, artificial intelligence (AI) is revolutionizing the web design industry, offering a path to better quality, higher conversions, and lower costs. Better Quality: Precision and Personalization Design Optimization: AI can analyze vast amounts of data to …",
   },
   {
     category: "Brand Design",
@@ -40,6 +170,8 @@ const blog = [
     title: "How OpenAI's Sora Will Revolutionize Web Design",
     date: "May 31, 2024",
     author: "Frank Farris",
+    summary:
+      "OpenAI’s Sora Will Revolutionize Web Design: Get ready to WOW. The web design landscape is about to experience a seismic shift. OpenAI’s groundbreaking AI model, Sora, promises to generate high-quality, dynamic video content from simple text descriptions. Buckle up, because this isn’t just a minor upgrade – Sora has the potential to completely redefine how …",
   },
   {
     category: "Artificial Intelligence",

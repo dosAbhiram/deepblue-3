@@ -10,7 +10,9 @@ function BlogCategory() {
           (category, index) => (
             <li key={index}>
               <Link
-                to={`/category/${category.toLowerCase().replace(/\s+/g, "-")}`}
+                to={`/category/${category
+                  .toLowerCase()
+                  .replace(/[\\/\s]+/g, "-")}`}
               >
                 <span>{category}</span>
               </Link>

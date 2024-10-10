@@ -11,9 +11,9 @@ function CategoryBanner() {
   const { category } = useParams();
 
   const formattedCategory = category
-    .split("-")
+    .split(" ")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
+    .join("-");
 
   console.log(formattedCategory);
 
@@ -27,6 +27,7 @@ function CategoryBanner() {
     ? categoryImage.link
     : "/deepblue-3/images/blogs/blog-768x384.jpg";
 
+  const categoryName = categoryImage.name;
   console.log(categoryImage);
   return (
     <div
@@ -38,7 +39,7 @@ function CategoryBanner() {
       <div className="width-container">
         <div className="bl-inner">
           <div className="bl-wrapper">
-            <h1>Category: {formattedCategory}</h1>
+            <h1>Category: {categoryName}</h1>
             <div className="bl-empty-space-bottom"></div>
           </div>
         </div>
@@ -50,7 +51,7 @@ function CategoryBanner() {
 function CategoryContent() {
   const { category } = useParams();
   const filteredBlogs = blog.filter(
-    (post) => post.category.toLowerCase().replace(/\s+/g, "-") === category
+    (post) => post.category.toLowerCase().replace(/[\\/\s]+/g, "-") === category
   );
 
   return (

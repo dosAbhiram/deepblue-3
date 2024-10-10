@@ -14,11 +14,11 @@
 }
 .bl-wrapper {
   position: relative;
-  min-height: 1px;
   padding: 0px 15px;
   margin-bottom: 18px;
 }
 .blog-banner h1 {
+  max-width: 50%;
   font-size: 50px;
   line-height: 60px;
   margin-bottom: 18px;
@@ -274,4 +274,74 @@
 .archive-months span:hover {
   text-decoration: underline;
   transition: all 0.3 ease;
+}
+
+.blogs-search-result header {
+  border-top: 4px double #ddd;
+  border-bottom: 4px double #ddd;
+  color: #757575;
+  font-size: 1.4rem;
+  line-height: 3.5;
+  text-align: center;
+  padding: 0;
+  margin: 24px 0 30px;
+}
+.blogs-search-result header h1 {
+  color: #0075ed;
+  text-rendering: optimizelegibility;
+  line-height: 1.2em;
+  margin: 0px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.search-notFound {
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  color: #666;
+  font-weight: 400;
+}
+.blog-search-date {
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+  font-family: "Playfair Display", serif;
+}
+.blog-search-item h2 {
+  font-size: 30px;
+  line-height: 32px;
+  margin: 0;
+  margin-bottom: 12px;
+  color: #000;
+  font-weight: 400;
+}
+.blog-search-item a {
+  text-decoration: none;
+}
+.blog-posts .blog-list p {
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  color: #666;
+}
+.blog-posts .blog-list p:hover {
+  text-decoration: none;
+}
+.blog-posts .blog-lists .read-more-link {
+  margin-bottom: 30px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+  line-height: 28px;
+  margin: 0;
+}
+.blog-posts .blog-list .read-more-link:hover {
+  text-decoration: underline;
+}
+.blog-posts .blog-list .blog-search-date:hover {
+  text-decoration: underline;
+}
+.blog-search-date:hover {
+  text-decoration: underline;
 }

@@ -12,6 +12,7 @@ import ScrollToTop from "./components/common/scrollToTop";
 import Blogs from "./pages/Blogs/blog-main";
 import ArchiveBlogs from "./pages/Blogs/blog-archives";
 import CategoryBlogs from "./pages/Blogs/blog-categories";
+import SearchBlogs from "./pages/Blogs/blog-search";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/blog" element={<Blogs />} />
         <Route path="/:year/:month" element={<ArchiveBlogs />} />
         <Route path="/category/:category" element={<CategoryBlogs />} />
+        <Route path="/search" element={<SearchBlogs />} />
       </Routes>
       <Footer id="footer" />
     </Router>
