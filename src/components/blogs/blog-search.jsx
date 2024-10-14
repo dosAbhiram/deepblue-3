@@ -1,15 +1,14 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Use this to navigate to another page
+import { useNavigate } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function BlogSearch() {
   const [searchTerm, setSearchTerm] = useState("");
-  const navigate = useNavigate(); // Hook to navigate to a different route
+  const navigate = useNavigate();
 
   const handleSearch = (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
+    e.preventDefault();
     if (searchTerm.trim()) {
-      // Navigate to the search results page with the search term as a query param
       navigate(`/search?query=${encodeURIComponent(searchTerm)}`);
     }
   };

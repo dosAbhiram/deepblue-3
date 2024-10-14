@@ -1,10 +1,17 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import blog from "../../data/blogs";
+import blogs from "../../data/blog";
 import BlogSearch from "../../components/blogs/blog-search";
 import BlogRecents from "../../components/blogs/blog-recent";
 import BlogCategory from "../../components/blogs/blog-categories";
 import BlogArchives from "../../components/blogs/blog-archive";
+
+function generateSlug(title) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+}
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -17,7 +24,7 @@ function SearchResults() {
 
   useEffect(() => {
     if (searchTerm) {
-      const results = blog.filter((post) =>
+      const results = blogs.filter((post) =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredPosts(results);
@@ -43,9 +50,21 @@ function SearchResults() {
               <div className="blog-search-date">
                 <span>{post.date}</span>
               </div>
-              <h2>{post.title}</h2>
+              <h2>
+                <Link
+                  to={`/blog/${generateSlug(post.title)}`}
+                  className="blog-links"
+                >
+                  {post.title}
+                </Link>
+              </h2>
               <p className="search-result-summary">{post.summary}</p>
-              <p className="read-more-link">Continue reading</p>
+
+              <p className="read-more-link">
+                <Link to={`/blog/${generateSlug(post.title)}`}>
+                  Continue reading
+                </Link>
+              </p>
             </div>
           ))
         ) : (

@@ -1,10 +1,17 @@
-import blog from "../../data/blogs"; // Import the blog data
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import blogs from "../../data/blog";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import BlogSearch from "../../components/blogs/blog-search";
 import BlogRecents from "../../components/blogs/blog-recent";
 import BlogCategory from "../../components/blogs/blog-categories";
 import BlogArchives from "../../components/blogs/blog-archive";
+
+function generateSlug(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+}
 
 function ArchiveBanner() {
   const { year, month } = useParams();
@@ -30,7 +37,7 @@ function ArchiveBanner() {
 function ArchiveContent() {
   const { year, month } = useParams();
 
-  const filteredPosts = blog.filter((post) => {
+  const filteredPosts = blogs.filter((post) => {
     const postDate = new Date(post.date);
     const postYear = postDate.getFullYear();
     const postMonth = postDate
@@ -38,15 +45,26 @@ function ArchiveContent() {
       .toLowerCase();
     return postYear === parseInt(year) && postMonth === month.toLowerCase();
   });
+
   return (
     <div className="blog-posts">
       {filteredPosts
         .sort((a, b) => new Date(b.date) - new Date(a.date))
         .map((post, index) => (
           <div key={index} className="blog-articles">
-            <p>{post.category.toUpperCase()}</p>
+            <Link
+              to={`/category/${generateSlug(post.category)}`}
+              className="blog-category-link"
+            >
+              {post.category.toUpperCase()}
+            </Link>
             <h2>
-              <a href={post.link}>{post.title}</a>
+              <Link
+                className="blog-links"
+                to={`/blog/${generateSlug(post.title)}`}
+              >
+                {post.title}
+              </Link>
             </h2>
             <span className="blog-time">
               {post.date} <span className="line">|</span> by {post.author}
@@ -56,6 +74,7 @@ function ArchiveContent() {
     </div>
   );
 }
+
 function ArchiveBlogs() {
   return (
     <>

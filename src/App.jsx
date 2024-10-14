@@ -13,6 +13,7 @@ import Blogs from "./pages/Blogs/blog-main";
 import ArchiveBlogs from "./pages/Blogs/blog-archives";
 import CategoryBlogs from "./pages/Blogs/blog-categories";
 import SearchBlogs from "./pages/Blogs/blog-search";
+import InnerBlogs from "./pages/Blogs/inner-blog";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/:year/:month" element={<ArchiveBlogs />} />
         <Route path="/category/:category" element={<CategoryBlogs />} />
         <Route path="/search" element={<SearchBlogs />} />
+        <Route path="/blog/:title" element={<InnerBlogs />} />
       </Routes>
       <Footer id="footer" />
     </Router>

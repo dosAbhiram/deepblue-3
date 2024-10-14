@@ -1,5 +1,5 @@
 import { useState } from "react";
-import blog from "../../data/blogs";
+import blogs from "../../data/blog";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { Link } from "react-router-dom";
 
@@ -22,7 +22,7 @@ function BlogArchives() {
     return archive;
   };
 
-  const archiveData = getArchiveData(blog);
+  const archiveData = getArchiveData(blogs);
 
   const toggleYear = (year) => {
     if (expandedYears.includes(year)) {

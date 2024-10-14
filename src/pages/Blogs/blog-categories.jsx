@@ -1,5 +1,5 @@
-import { useParams } from "react-router-dom";
-import blog from "../../data/blogs";
+import { useParams, Link } from "react-router-dom";
+import blogs from "../../data/blog";
 import categoryImages from "../../data/blog-category";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import BlogSearch from "../../components/blogs/blog-search";
@@ -7,28 +7,27 @@ import BlogRecents from "../../components/blogs/blog-recent";
 import BlogCategory from "../../components/blogs/blog-categories";
 import BlogArchives from "../../components/blogs/blog-archive";
 
+function generateSlug(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)+/g, "");
+}
+
 function CategoryBanner() {
   const { category } = useParams();
-
-  const formattedCategory = category
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join("-");
-
-  console.log(formattedCategory);
+  const formattedCategory = generateSlug(category);
 
   const categoryImage = categoryImages.find(
-    (item) => item.category.toLowerCase() === formattedCategory.toLowerCase()
+    (item) => generateSlug(item.category) === formattedCategory
   );
-
-  console.log(categoryImage);
 
   const backgroundImage = categoryImage
     ? categoryImage.link
     : "/deepblue-3/images/blogs/blog-768x384.jpg";
 
-  const categoryName = categoryImage.name;
-  console.log(categoryImage);
+  const categoryName = categoryImage ? categoryImage.name : category;
+
   return (
     <div
       className="blog-banner"
@@ -50,17 +49,29 @@ function CategoryBanner() {
 
 function CategoryContent() {
   const { category } = useParams();
-  const filteredBlogs = blog.filter(
-    (post) => post.category.toLowerCase().replace(/[\\/\s]+/g, "-") === category
+  const formattedCategory = generateSlug(category);
+
+  const filteredBlogs = blogs.filter(
+    (post) => generateSlug(post.category) === formattedCategory
   );
 
   return (
     <div className="blog-posts">
       {filteredBlogs.map((post, index) => (
         <div key={index} className="blog-articles">
-          <p>{post.category.toUpperCase()}</p>
+          <Link
+            to={`/category/${generateSlug(post.category)}`}
+            className="blog-category-link"
+          >
+            {post.category.toUpperCase()}
+          </Link>
           <h2>
-            <a href={post.link}>{post.title}</a>
+            <Link
+              className="blog-links"
+              to={`/blog/${generateSlug(post.title)}`}
+            >
+              {post.title}
+            </Link>
           </h2>
           <span className="blog-time">
             {post.date} <span className="line">|</span> by {post.author}
