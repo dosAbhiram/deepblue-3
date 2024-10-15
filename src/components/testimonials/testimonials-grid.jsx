@@ -151,7 +151,7 @@ function TestimonialsGrid() {
           </div>
         </div>
       </div>
-      <div className="testimonials-grid no-border">
+      <div className="testimonials-grid">
         <div className="width-container">
           <div className="tst-wrapper">
             <motion.div

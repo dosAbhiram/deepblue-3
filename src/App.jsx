@@ -14,6 +14,7 @@ import ArchiveBlogs from "./pages/Blogs/blog-archives";
 import CategoryBlogs from "./pages/Blogs/blog-categories";
 import SearchBlogs from "./pages/Blogs/blog-search";
 import InnerBlogs from "./pages/Blogs/inner-blog";
+import Consultation from "./pages/consultation";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/caseStudy" element={<CaseStudy />} />
+        <Route path="/case-studies" element={<CaseStudy />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/work/intel" element={<IntelCaseStudy />} />
         <Route path="/blog" element={<Blogs />} />
@@ -33,6 +34,7 @@ function App() {
         <Route path="/category/:category" element={<CategoryBlogs />} />
         <Route path="/search" element={<SearchBlogs />} />
         <Route path="/blog/:title" element={<InnerBlogs />} />
+        <Route path="/consultation" element={<Consultation />} />
       </Routes>
       <Footer id="footer" />
     </Router>

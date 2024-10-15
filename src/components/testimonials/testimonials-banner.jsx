@@ -4,7 +4,7 @@ function TestimonialsBanner() {
       <div className="width-container">
         <div className="testimaonials-empty-space"></div>
         <div className="tst-inner">
-          <div className="tst-wrapper">
+          <div className="tst-banner-wrapper">
             <h1>Testimonials</h1>
             <p>
               <em>

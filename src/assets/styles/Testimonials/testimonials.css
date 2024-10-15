@@ -16,7 +16,7 @@
   padding: 0 15px;
   width: 100%;
 }
-.tst-wrapper {
+.tst-banner-wrapper {
   margin-bottom: 15px;
 }
 .testimonials-banner h1 {
@@ -27,7 +27,7 @@
   color: rgb(255, 255, 255);
 }
 
-.testimonials-banner p {
+.testimonials-banner p em {
   color: rgb(255, 255, 255);
 }
 .tst-empty-space-bottom {
